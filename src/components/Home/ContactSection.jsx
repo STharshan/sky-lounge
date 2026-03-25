@@ -12,9 +12,9 @@ const ContactSection = () => {
               Sky Lounge Leicester
             </h2>
             <div className="space-y-2">
-              <h4 className="text-xl font-medium">
+              <a href="https://maps.app.goo.gl/eqpu4roRZYGDCD3KA" target='_blank' className="text-xl font-medium transition-colors duration-300 hover:text-[#B8975A]">
                 63 Bedford St S, Leicester LE1 3JR, United Kingdom
-              </h4>
+              </a>
               <p className="text-[#F0E0B0]/70">
                 Located in the heart of Leicester, near the city centre
               </p>

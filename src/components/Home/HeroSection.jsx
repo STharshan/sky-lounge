@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
-    <section id="#" className="relative h-screen w-full overflow-hidden bg-[#0A1F12]">
+    <section id="home" className="relative h-screen w-full overflow-hidden bg-[#0A1F12]">
 
       {/* Background Video */}
       <video
@@ -40,10 +42,10 @@ export default function Hero() {
         </p>
 
         {/* CTA Button */}
-        <button className="mt-8 px-8 py-3 border border-[#B8975A] text-[#F0E0B0] 
-          hover:bg-[#B8975A] hover:text-black transition duration-300 tracking-widest uppercase text-sm">
+        <Link to="/booking-page" className="mt-8 px-8 py-3 border border-[#B8975A] text-[#F0E0B0] 
+          hover:bg-[#B8975A] hover:text-black rounded-full transition duration-300 tracking-widest uppercase text-sm">
           Book a Table
-        </button>
+        </Link>
       </div>
     </section>
   );

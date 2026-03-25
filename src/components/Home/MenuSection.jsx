@@ -24,19 +24,19 @@ const menuData = {
       <div className="w-full lg:w-1/3 lg:h-screen lg:sticky lg:top-0 flex flex-col border-r border-[#B8975A]/20">
         <div className="h-1/3 w-full">
           <img 
-            src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=800" 
+            src="/t11.webp" 
             alt="Sushi Prep" className="w-full h-full object-cover" 
           />
         </div>
         <div className="h-1/3 w-full border-y border-[#B8975A]/20">
           <img 
-            src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&q=80&w=800" 
+            src="/t12.webp" 
             alt="Sushi Plate" className="w-full h-full object-cover" 
           />
         </div>
         <div className="h-1/3 w-full">
           <img 
-            src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?auto=format&fit=crop&q=80&w=800" 
+            src="/t7.webp" 
             alt="Nigiri" className="w-full h-full object-cover" 
           />
         </div>

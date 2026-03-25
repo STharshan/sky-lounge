@@ -1,37 +1,43 @@
 import { useState } from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export default function FullscreenNavbar() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { name: "Home", href: "#" },
-    { name: "Menu", href: "#" },
-    { name: "Events", href: "#" },
-    { name: "Book your table", href: "#" },
-    { name: "Get in touch", href: "#" },
+    { name: "Home", href: "/#" },
+    { name: "Menu", href: "/#menu" },
+    { name: "Testimonial", href: "/#testimonial" },
+    { name: "Book your table", href: "/booking-page" },
+    { name: "Get in touch", href: "/#contact" },
   ];
 
   const socials = [
-    { 
-      icon: <FaFacebookF size={18} />, 
-      url: "https://www.facebook.com/skyloungeleicester/" 
+    {
+      icon: <FaFacebookF size={18} />,
+      url: "https://www.facebook.com/skyloungeleicester/"
     },
-    { 
-      icon: <FaInstagram size={20} />, 
-      url: "https://www.instagram.com/skyloungeleicester/" 
+    {
+      icon: <FaInstagram size={20} />,
+      url: "https://www.instagram.com/skyloungeleicester/"
     },
   ];
 
   return (
     <div>
       {/* NAVBAR */}
-      <div className="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-5 bg-[#0A1F12] text-[#F0E0B0] z-[100]">
-        
-        {/* Logo with Gold Gradient */}
-        <h1 className="text-xl font-bold bg-gradient-to-r from-[#B8975A] via-[#F0E0B0] to-[#B8975A] bg-clip-text text-transparent italic">
-          Sky Lounge
-        </h1>
+      <div className="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-5 bg-[#0A1F12] text-[#F0E0B0] z-100">
+
+        {/* Logo with Gold linear */}
+        <div className="transition-opacity hover:opacity-80">
+          <img
+            src="/logo.png" // Replace with your actual logo path
+            alt="Sky Lounge Logo"
+            className="h-10 md:h-15 w-auto object-contain"
+          />
+        </div>
 
         {/* TOGGLE BUTTON */}
         <button
@@ -44,14 +50,12 @@ export default function FullscreenNavbar() {
 
           <div className="flex flex-col gap-1.5 relative">
             <span
-              className={`block h-0.5 bg-[#B8975A] transition-all duration-300 ${
-                open ? "rotate-45 translate-y-2 w-6" : "w-6"
-              }`}
+              className={`block h-0.5 bg-[#B8975A] transition-all duration-300 ${open ? "rotate-45 translate-y-2 w-6" : "w-6"
+                }`}
             ></span>
             <span
-              className={`block h-0.5 bg-[#B8975A] transition-all duration-300 ${
-                open ? "-rotate-45 -translate-y-0 w-6" : "w-4 self-end"
-              }`}
+              className={`block h-0.5 bg-[#B8975A] transition-all duration-300 ${open ? "-rotate-45 translate-y-0 w-6" : "w-4 self-end"
+                }`}
             ></span>
           </div>
         </button>
@@ -59,18 +63,17 @@ export default function FullscreenNavbar() {
 
       {/* FULLSCREEN MENU OVERLAY */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-[#0A1F12] z-[90] transition-all duration-700 ease-in-out ${
-          open ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed top-0 left-0 w-full h-screen bg-[#0A1F12] z-90 transition-all duration-700 ease-in-out ${open ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
       >
         <div className="flex flex-col md:flex-row h-full pt-20">
-          
+
           {/* NAVIGATION LINKS */}
           <div className="flex-1 flex flex-col justify-center px-10 md:px-20 space-y-8">
             {links.map((link, i) => (
-              <a
+              <HashLink
                 key={i}
-                href={link.href}
+                to={link.href}
                 onClick={() => setOpen(false)}
                 style={{ transitionDelay: `${i * 100}ms` }}
                 className={`text-4xl md:text-6xl font-serif tracking-tight relative group block 
@@ -80,8 +83,8 @@ export default function FullscreenNavbar() {
                 <span className="inline-block group-hover:translate-x-4 text-[#B8975A] transition duration-500 group-hover:text-[#F0E0B0]">
                   {link.name}
                 </span>
-                <span className="absolute left-0 -bottom-2 w-0 h-[1px] bg-gradient-to-r from-[#B8975A] to-transparent group-hover:w-full transition-all duration-500"></span>
-              </a>
+                <span className="absolute left-0 -bottom-2 w-0 h-px bg-linear-to-r from-[#B8975A] to-transparent group-hover:w-full transition-all duration-500"></span>
+              </HashLink>
             ))}
           </div>
 
@@ -90,9 +93,8 @@ export default function FullscreenNavbar() {
 
             {/* Clickable Contact Info */}
             <div
-              className={`space-y-4 text-left md:text-right transition-all duration-700 ${
-                open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-              }`}
+              className={`space-y-4 pt-10 text-left md:text-right  transition-all duration-700 ${open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
               style={{ transitionDelay: "400ms" }}
             >
               <div className="space-y-1">
@@ -111,9 +113,8 @@ export default function FullscreenNavbar() {
 
             {/* Social Media Icons (React Icons) */}
             <div
-              className={`flex gap-6 transition-all duration-700 ${
-                open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-              }`}
+              className={`flex gap-6 transition-all duration-700 ${open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
               style={{ transitionDelay: "600ms" }}
             >
               {socials.map((social, i) => (
