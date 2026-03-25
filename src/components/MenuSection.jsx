@@ -19,7 +19,7 @@ const MenuSection = () => {
   };
 
   return (
-    <section className="bg-[#0A1F12] flex flex-col lg:flex-row min-h-screen">
+    <section className="bg-[#1B3A2D] flex flex-col lg:flex-row min-h-screen">
       
       {/* LEFT SIDE: Fixed Image Column (Hidden on mobile scroll, sticky on desktop) */}
       <div className="w-full lg:w-1/3 lg:h-screen lg:sticky lg:top-0 flex flex-col border-r border-[#B8975A]/20">

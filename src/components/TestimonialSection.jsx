@@ -54,7 +54,7 @@ export default function TestimonialSection() {
   }, []);
 
   return (
-    <section className="bg-[#0A1F12] py-20 overflow-hidden">
+    <section className="bg-[#1B3A2D] py-20 overflow-hidden">
       <div
         ref={scrollRef}
         onMouseEnter={() => (isHovered.current = true)}

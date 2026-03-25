@@ -15,10 +15,10 @@ const SplitScrollingHero = () => {
   ];
 
   return (
-    <section className="bg-[#0A1F12] flex flex-col lg:flex-row min-h-screen overflow-hidden">
+    <section className="flex flex-col lg:flex-row min-h-screen overflow-hidden">
       
       {/* LEFT SIDE: Exactly 50% width, Sticky Content */}
-      <div className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 flex items-center justify-center p-8 md:p-16 lg:p-20 z-20 bg-[#0A1F12]">
+      <div className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 flex items-center justify-center p-8 md:p-16 lg:p-20 z-20 bg-[#1B3A2D]">
         <div className="max-w-xl">
           <h2 className="text-[#B8975A] text-5xl md:text-7xl font-serif font-bold uppercase leading-[1.1] mb-8">
             Taste the City <br /> in Every Bite
