@@ -15,20 +15,19 @@ const SplitScrollingHero = () => {
   ];
 
   return (
-    <section className="flex flex-col lg:flex-row min-h-screen overflow-hidden">
+    <section id='gallery' className="flex flex-col lg:flex-row min-h-screen overflow-hidden">
       
       {/* LEFT SIDE: Exactly 50% width, Sticky Content */}
       <div className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 flex items-center justify-center p-8 md:p-16 lg:p-20 z-20 bg-[#1B3A2D]">
         <div className="max-w-xl">
-          <h2 className="text-[#B8975A] text-5xl md:text-7xl font-serif font-bold uppercase leading-[1.1] mb-8">
-            Taste the City <br /> in Every Bite
+          <h2 className="text-[#B8975A] text-5xl md:text-7xl  font-bold uppercase leading-[1.1] mb-8">
+            Taste the Atmosphere <br /> in Every Visit
           </h2>
           <p className="text-[#F0E0B0] text-lg md:text-xl font-light mb-10 opacity-80 leading-relaxed max-w-lg">
-            Discover dishes that break the rules and celebrate flavor. From 
-            street-inspired bites to modern classics, every plate is made to impress.
+            Discover a space where premium shisha meets exceptional food and drink. From curated flavours to signature mocktails, every detail is crafted for the experience.
           </p>
           <button className="px-10 py-4 bg-[#1B3A2D] text-[#B8975A] border border-[#B8975A]/30 rounded-sm hover:bg-[#B8975A] hover:text-[#0A1F12] transition-all duration-500 font-bold uppercase tracking-widest text-sm shadow-2xl">
-            Explore
+            Explore the Menu
           </button>
         </div>
       </div>

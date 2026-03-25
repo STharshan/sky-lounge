@@ -2,10 +2,10 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <section className="bg-[#1B3A2D] py-16 px-6 md:py-24">
+    <section id='about' className="bg-[#1B3A2D] py-16 px-6 md:py-24">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
-        <h2 className="text-[#B8975A] text-4xl md:text-5xl font-serif mb-12">
+        <h2 className="text-[#B8975A] text-4xl md:text-5xl  mb-12">
           About us
         </h2>
 
@@ -37,17 +37,10 @@ const AboutSection = () => {
             {/* Text Content */}
             <div className="space-y-6 max-w-lg">
               <p className="text-[#F0E0B0] text-xl md:text-2xl font-medium leading-relaxed">
-                Established in 2012, the restaurant serves up awesome food experiences 
-                with an <span className="text-[#B8975A]">aesthetic joy</span>.
+                Established in the heart of Leicester, Sky Lounge is where premium shisha culture meets a warm, welcoming atmosphere, a destination built for 
+                those who appreciate <span className="text-[#B8975A]"> the finer things done right.</span>
               </p>
-              
-              <div className="w-16 h-px bg-[#B8975A]"></div>
-              
-              <p className="text-[#F0E0B0]/80 text-base md:text-lg leading-relaxed font-light">
-                We are passionate creators of culinary experiences, dedicated to 
-                delighting our guests with exceptional food, warm hospitality, 
-                and unforgettable moments.
-              </p>
+            
             </div>
 
           </div>

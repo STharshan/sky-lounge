@@ -1,112 +1,131 @@
 import { useState } from "react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa6";
 
 export default function FullscreenNavbar() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    "Home",
-    "Menu",
-    "Events",
-    "Book your table",
-    "Get in touch",
+    { name: "Home", href: "#" },
+    { name: "Menu", href: "#" },
+    { name: "Events", href: "#" },
+    { name: "Book your table", href: "#" },
+    { name: "Get in touch", href: "#" },
+  ];
+
+  const socials = [
+    { 
+      icon: <FaFacebookF size={18} />, 
+      url: "https://www.facebook.com/skyloungeleicester/" 
+    },
+    { 
+      icon: <FaInstagram size={20} />, 
+      url: "https://www.instagram.com/skyloungeleicester/" 
+    },
   ];
 
   return (
     <div>
       {/* NAVBAR */}
-      <div className="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-5 bg-[#0A1F12] text-[#F0E0B0] z-100">
+      <div className="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-5 bg-[#0A1F12] text-[#F0E0B0] z-[100]">
         
-        {/* Logo */}
-        <h1 className="text-xl font-bold bg-linear-to-r from-[#B8975A] via-[#F0E0B0] to-[#B8975A] bg-clip-text text-transparent">
-          GOMA
+        {/* Logo with Gold Gradient */}
+        <h1 className="text-xl font-bold bg-gradient-to-r from-[#B8975A] via-[#F0E0B0] to-[#B8975A] bg-clip-text text-transparent italic">
+          Sky Lounge
         </h1>
 
         {/* TOGGLE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 group focus:outline-none"
         >
-          <span className="tracking-widest text-sm">
+          <span className="tracking-[0.3em] text-xs font-bold text-[#B8975A]">
             {open ? "CLOSE" : "MENU"}
           </span>
 
-          {/* Animated Hamburger → X */}
-          <div className="flex flex-col gap-1 relative">
+          <div className="flex flex-col gap-1.5 relative">
             <span
-              className={`block h-0.5 bg-[#F0E0B0] transition-all duration-300 ${
-                open
-                  ? "rotate-45 translate-y-1.25 w-6"
-                  : "w-6"
+              className={`block h-0.5 bg-[#B8975A] transition-all duration-300 ${
+                open ? "rotate-45 translate-y-2 w-6" : "w-6"
               }`}
             ></span>
             <span
-              className={`block h-0.5 bg-[#F0E0B0] transition-all duration-300 ${
-                open
-                  ? "-rotate-45 -translate-y-1.25 w-6"
-                  : "w-4"
+              className={`block h-0.5 bg-[#B8975A] transition-all duration-300 ${
+                open ? "-rotate-45 -translate-y-0 w-6" : "w-4 self-end"
               }`}
             ></span>
           </div>
         </button>
       </div>
 
-      {/* FULLSCREEN MENU */}
+      {/* FULLSCREEN MENU OVERLAY */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-[#0A1F12] z-90 transition-all duration-500 ${
+        className={`fixed top-0 left-0 w-full h-screen bg-[#0A1F12] z-[90] transition-all duration-700 ease-in-out ${
           open ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        <div className="flex flex-col md:flex-row h-full">
+        <div className="flex flex-col md:flex-row h-full pt-20">
           
-          {/* LEFT LINKS */}
-          <div className="flex-1 flex flex-col justify-center px-10 md:px-20 space-y-6">
+          {/* NAVIGATION LINKS */}
+          <div className="flex-1 flex flex-col justify-center px-10 md:px-20 space-y-8">
             {links.map((link, i) => (
               <a
                 key={i}
-                href="#"
+                href={link.href}
                 onClick={() => setOpen(false)}
                 style={{ transitionDelay: `${i * 100}ms` }}
-                className={`text-3xl md:text-5xl font-serif tracking-wide relative group 
-                transition-all duration-500
+                className={`text-4xl md:text-6xl font-serif tracking-tight relative group block 
+                transition-all duration-700
                 ${open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
               >
-                <span className="block group-hover:translate-x-2 transition duration-300">
-                  {link}
+                <span className="inline-block group-hover:translate-x-4 text-[#B8975A] transition duration-500 group-hover:text-[#F0E0B0]">
+                  {link.name}
                 </span>
-
-                <span className="absolute left-0 bottom-0 w-0 h-px bg-[#B8975A] group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute left-0 -bottom-2 w-0 h-[1px] bg-gradient-to-r from-[#B8975A] to-transparent group-hover:w-full transition-all duration-500"></span>
               </a>
             ))}
           </div>
 
-          {/* RIGHT SIDE */}
-          <div className="flex-1 flex flex-col justify-end md:justify-center items-start md:items-end px-10 md:px-20 pb-10 md:pb-0 space-y-6">
+          {/* CONTACT & SOCIALS */}
+          <div className="flex-1 flex flex-col justify-end md:justify-center items-start md:items-end px-10 md:px-20 pb-16 md:pb-0 space-y-10">
 
-            {/* Contact */}
+            {/* Clickable Contact Info */}
             <div
-              className={`space-y-2 text-sm transition-all duration-500 ${
+              className={`space-y-4 text-left md:text-right transition-all duration-700 ${
                 open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
-              style={{ transitionDelay: "300ms" }}
+              style={{ transitionDelay: "400ms" }}
             >
-              <p className="text-[#F0E0B0]/70">info@goma.com</p>
-              <p className="text-[#F0E0B0]/70">+45 12 12 12 12</p>
+              <div className="space-y-1">
+                <p className="text-[#B8975A] text-[10px] uppercase tracking-[0.3em] font-bold">Email Us</p>
+                <a href="mailto:info@skyloungeleicester.co.uk" className="text-[#F0E0B0] hover:text-white transition block">
+                  info@skyloungeleicester.co.uk
+                </a>
+              </div>
+              <div className="space-y-1">
+                <p className="text-[#B8975A] text-[10px] uppercase tracking-[0.3em] font-bold">Call Us</p>
+                <a href="tel:+441163328639" className="text-[#F0E0B0] hover:text-white transition block">
+                  +44 116 332 8639
+                </a>
+              </div>
             </div>
 
-            {/* Social */}
+            {/* Social Media Icons (React Icons) */}
             <div
-              className={`flex gap-4 transition-all duration-500 ${
+              className={`flex gap-6 transition-all duration-700 ${
                 open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
-              style={{ transitionDelay: "500ms" }}
+              style={{ transitionDelay: "600ms" }}
             >
-              {["FB", "IG", "TW"].map((s, i) => (
-                <div
+              {socials.map((social, i) => (
+                <a
                   key={i}
-                  className="w-10 h-10 border border-[#B8975A] flex items-center justify-center text-[#B8975A] hover:bg-[#B8975A] hover:text-black transition"
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 border border-[#B8975A]/40 rounded-full flex items-center justify-center text-[#B8975A] hover:bg-[#B8975A] hover:text-[#0A1F12] hover:border-[#B8975A] transition-all duration-300 shadow-lg"
                 >
-                  {s}
-                </div>
+                  {social.icon}
+                </a>
               ))}
             </div>
 

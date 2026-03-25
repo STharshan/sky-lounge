@@ -54,7 +54,7 @@ export default function TestimonialSection() {
   }, []);
 
   return (
-    <section className="bg-[#1B3A2D] py-20 overflow-hidden">
+    <section id="testimonial" className="bg-[#1B3A2D] py-20 overflow-hidden">
       <div
         ref={scrollRef}
         onMouseEnter={() => (isHovered.current = true)}
@@ -92,7 +92,7 @@ export default function TestimonialSection() {
                   
                   {/* Bottom Gold Rating Card */}
                   <div className="bg-[#B8975A] p-8 h-66 flex flex-col justify-center rounded-sm">
-                    <h2 className="text-[#0A1F12] text-7xl font-serif font-bold italic leading-none">
+                    <h2 className="text-[#0A1F12] text-7xl  font-bold italic leading-none">
                       {group.rating}
                     </h2>
                     <p className="text-[#0A1F12] text-sm mt-2">★★★★★</p>
@@ -104,7 +104,7 @@ export default function TestimonialSection() {
 
                 {/* 3. RIGHT COLUMN (Tall Review Card) */}
                 <div className="w-75 md:w-95 bg-[#1B3A2D] p-10 h-138 md:h-150 flex flex-col justify-start rounded-sm border border-[#B8975A]/10 shrink-0">
-                   <span className="text-[#B8975A] text-4xl font-serif mb-6 opacity-40">"</span>
+                   <span className="text-[#B8975A] text-4xl  mb-6 opacity-40">"</span>
                    <p className="text-[#B8975A] text-sm mb-2">★★★★★</p>
                    <p className="text-[#F0E0B0] text-xl leading-relaxed font-light">
                     {group.review2.text}

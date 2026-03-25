@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-[#0A1F12]">
+    <section id="#" className="relative h-screen w-full overflow-hidden bg-[#0A1F12]">
 
       {/* Background Video */}
       <video
@@ -13,7 +13,7 @@ export default function Hero() {
         <source src="/video.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark Overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* linear Overlay (luxury feel) */}
@@ -23,20 +23,20 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6">
 
         {/* Heading */}
-        <h1 className="font-serif font-semibold leading-tight pt-20 
+        <h1 className=" font-semibold leading-tight pt-20 
           text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl
           bg-linear-to-r from-[#B8975A] via-[#F0E0B0] to-[#B8975A]
           bg-clip-text text-transparent
         ">
           Indulge in the Art of <br />
-          Luxurious & Flavour
+          Shisha & Flavour
         </h1>
 
         {/* Description */}
-        <p className="mt-6 text-sm sm:text-base md:text-lg text-[#F0E0B0]/80 leading-relaxed">
-          MONDAY THROUGH FRIDAY 5PM – 11PM <br />
-          SATURDAY 3PM – 11PM <br />
-          SUNDAY CLOSED
+        <p className="mt-6 text-sm sm:text-base md:text-lg uppercase text-[#F0E0B0]/80 leading-relaxed">
+          Tuesday - Thursday & Monday: 4PM - 1AM<br />
+          Friday: 4PM - 2AM · Saturday: 2PM - 2AM <br />
+          Sunday: 2PM - 1AM
         </p>
 
         {/* CTA Button */}

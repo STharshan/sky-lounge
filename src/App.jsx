@@ -3,22 +3,26 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
-// import TermsConditions from "./components/Term";
-// import PrivacyPolicy from "./components/PrivacyPolicy";
-// import GDPRConsent from "./components/GDPRButton";
+import BookingPage from "./pages/BookingPage";
+import TermsConditions from "./components/Term";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import GDPRConsent from "./components/GDPRButton";
+import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToHash />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/terms" element={<TermsConditions />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} /> */}
+        <Route path="/booking-page" element={<BookingPage /> } />
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
-      {/* <GDPRConsent /> */}
+      <GDPRConsent />
     </Router>
   );
 }

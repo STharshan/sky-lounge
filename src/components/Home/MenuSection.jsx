@@ -3,23 +3,22 @@ import React, { useState } from 'react';
 const MenuSection = () => {
   const [category, setCategory] = useState('SHISHA');
 
-  const menuData = {
-    SHISHA: [
-      { name: 'KAPPA', japanese: 'かっぱ', price: '$9', description: 'Crisp cucumber rolled with sushi' },
-      { name: 'TEKKA', japanese: 'てっか', price: '$12', description: 'Lean tuna wrapped in sushi' },
-      { name: 'NEGITORO', japanese: 'ネギトロ', price: '$22', description: 'Minced fatty tuna with green onion' },
-      { name: 'DRAGON', japanese: 'ドラゴン', price: '$27', description: 'Eel and cucumber inside' },
-    ],
-    DRINKS: [
-      { name: 'SUNTORY WHISKY', japanese: 'サントリー', price: '$15', description: 'Premium Japanese highball' },
-      { name: 'ASAHI SUPER DRY', japanese: 'アサヒ', price: '$8', description: 'Crisp, clean lager' },
-      { name: 'MATCHA LATTE', japanese: '抹茶ラテ', price: '$7', description: 'Ceremonial grade green tea with milk' },
-      { name: 'SAKE FLIGHT', japanese: '日本酒', price: '$25', description: 'Selection of three seasonal sakes' },
-    ]
-  };
-
+const menuData = {
+  SHISHA: [
+    { name: 'Fish & Chips', japanese: 'Fish & Chips', price: '$12', description: 'Crispy battered fish served with golden fries' },
+    { name: 'Full English Breakfast', japanese: 'Full English Breakfast', price: '$15', description: 'Eggs, bacon, sausage, beans, tomato, and toast' },
+    { name: 'Shepherd’s Pie', japanese: 'Shepherd’s Pie', price: '$14', description: 'Savory minced lamb topped with creamy mashed potatoes' },
+    { name: 'Bangers & Mash', japanese: 'Bangers & Mash', price: '$13', description: 'Grilled sausages served with mashed potatoes and onion gravy' },
+  ],
+  DRINKS: [
+    { name: 'Pimm’s Cup', japanese: 'Pimm’s Cup', price: '$10', description: 'Refreshing gin cocktail with fruit and cucumber' },
+    { name: 'English Ale', japanese: 'English Ale', price: '$7', description: 'Traditional crisp and malty beer' },
+    { name: 'Earl Grey Tea', japanese: 'Earl Grey Tea', price: '$5', description: 'Classic black tea with bergamot' },
+    { name: 'Gin & Tonic', japanese: 'Gin & Tonic', price: '$12', description: 'Premium gin mixed with tonic and lime' },
+  ]
+};
   return (
-    <section className="bg-[#1B3A2D] flex flex-col lg:flex-row min-h-screen">
+    <section id='menu' className="bg-[#1B3A2D] flex flex-col lg:flex-row min-h-screen">
       
       {/* LEFT SIDE: Fixed Image Column (Hidden on mobile scroll, sticky on desktop) */}
       <div className="w-full lg:w-1/3 lg:h-screen lg:sticky lg:top-0 flex flex-col border-r border-[#B8975A]/20">
@@ -47,7 +46,7 @@ const MenuSection = () => {
       <div className="w-full lg:w-2/3 p-8 md:p-16 lg:p-24 bg-[#1B3A2D]">
         
         <header className="mb-16">
-          <h1 className="text-[#B8975A] text-7xl md:text-9xl font-serif font-bold tracking-tighter">
+          <h1 className="text-[#B8975A] text-7xl md:text-9xl  font-bold tracking-tighter">
             MENU
           </h1>
         </header>
@@ -87,7 +86,7 @@ const MenuSection = () => {
                     {item.price}
                   </span>
                   <div className="text-right">
-                    <h3 className="text-[#F0E0B0] text-xl md:text-2xl font-serif">
+                    <h3 className="text-[#F0E0B0] text-xl md:text-2xl ">
                       {item.japanese} <span className="opacity-80 italic">({item.name})</span>
                     </h3>
                   </div>

@@ -17,10 +17,6 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               {[
-                "Style Guide",
-                "License",
-                "Changelog",
-                "Reservation Policy",
                 "Privacy Policy",
                 "Terms & Conditions",
               ].map((item, i) => (
@@ -38,12 +34,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               {[
+                "Home",
+                "About",
                 "Menu",
-                "Our Story",
                 "Gallery",
-                "Blogs",
                 "Contact us",
-                "Reviews",
+                "Booking Page",
               ].map((item, i) => (
                 <li key={i} className="hover:text-[#B8975A] cursor-pointer transition">
                   {item}
@@ -58,16 +54,16 @@ export default function Footer() {
           
           {/* Logo */}
           <h2 className="text-2xl font-semibold bg-linear-to-r from-[#B8975A] via-[#F0E0B0] to-[#B8975A] bg-clip-text text-transparent mb-6">
-            Crave
+            Sky Lounge
           </h2>
 
           <p className="text-sm text-[#F0E0B0]/80">
-            2118 Thornridge Cir. Syracuse,<br />
-            Connecticut 35624
+            63 Bedford St S, Leicester LE1 3JR,<br />
+            United Kingdom
           </p>
 
-          <p className="mt-2 text-sm">(480) 555-0103</p>
-          <p className="text-sm">info@example.com</p>
+          <p className="mt-2 text-sm">+44 116 332 8639</p>
+          <p className="text-sm">info@skyloungeleicester.co.uk</p>
         </div>
 
         {/* RIGHT */}
@@ -78,14 +74,13 @@ export default function Footer() {
               About Our Restaurant
             </h4>
             <p className="text-sm text-[#F0E0B0]/80 leading-relaxed">
-              Our inviting ambiance and attentive service create an atmosphere
-              that feels like home, inviting guests to linger and savor every moment.
+              Established in the heart of Leicester, Sky Lounge is where premium shisha culture meets a warm, welcoming atmosphere, a destination built for those who appreciate the finer things done right.
             </p>
           </div>
 
           {/* Social Icons */}
           <div className="flex md:justify-end gap-3">
-            {[FaTwitter, FaFacebookF, FaYoutube, FaInstagram].map((Icon, i) => (
+            {[FaFacebookF, FaInstagram].map((Icon, i) => (
               <div
                 key={i}
                 className="w-10 h-10 border border-[#B8975A]/50 flex items-center justify-center rounded-full text-[#B8975A] hover:bg-[#B8975A] hover:text-black transition"
@@ -99,10 +94,9 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className="max-w-7xl mx-auto pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-[#F0E0B0]/70 gap-4">
-        <p>© 2023 Crave. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Sky Lounge. All rights reserved.</p>
         <p>
-          Designed by <span className="text-[#B8975A]">Onmix</span>. Powered by{" "}
-          <span className="text-[#B8975A]">Webflow</span>.
+          Powered by<span className="text-[#B8975A]"> Ansely</span>
         </p>
       </div>
     </footer>
