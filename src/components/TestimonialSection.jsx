@@ -63,12 +63,12 @@ export default function TestimonialSection() {
       >
         {/* Loop twice for seamless transition */}
         {[...Array(2)].map((_, i) => (
-          <div key={i} className="flex gap-4 flex-shrink-0 items-start">
+          <div key={i} className="flex gap-4 shrink-0 items-start">
             {testimonialGroups.map((group, index) => (
-              <div key={index} className="flex gap-4 flex-shrink-0">
+              <div key={index} className="flex gap-4 shrink-0">
                 
                 {/* 1. LARGE IMAGE (Matches your image left side) */}
-                <div className="w-[350px] md:w-[500px] h-[450px] md:h-[600px] flex-shrink-0">
+                <div className="w-88 md:w-125 h-113 md:h-150 shrink-0">
                   <img
                     src={group.mainImg}
                     alt="Food presentation"
@@ -77,9 +77,9 @@ export default function TestimonialSection() {
                 </div>
 
                 {/* 2. MIDDLE COLUMN (Vertical Stack: Review + Rating) */}
-                <div className="flex flex-col gap-4 w-[300px] md:w-[380px] flex-shrink-0">
+                <div className="flex flex-col gap-4 w-75 md:w-95 shrink-0">
                   {/* Top Green Card */}
-                  <div className="bg-[#1B3A2D] p-8 h-[320px] flex flex-col justify-center rounded-sm border border-[#B8975A]/10">
+                  <div className="bg-[#1B3A2D] p-8 h-80 flex flex-col justify-center rounded-sm border border-[#B8975A]/10">
                     <span className="text-[#B8975A] text-2xl mb-4">"</span>
                     <p className="text-[#B8975A] text-sm mb-2">★★★★★</p>
                     <p className="text-[#F0E0B0] text-lg leading-relaxed font-light">
@@ -91,7 +91,7 @@ export default function TestimonialSection() {
                   </div>
                   
                   {/* Bottom Gold Rating Card */}
-                  <div className="bg-[#B8975A] p-8 h-[264px] flex flex-col justify-center rounded-sm">
+                  <div className="bg-[#B8975A] p-8 h-66 flex flex-col justify-center rounded-sm">
                     <h2 className="text-[#0A1F12] text-7xl font-serif font-bold italic leading-none">
                       {group.rating}
                     </h2>
@@ -103,7 +103,7 @@ export default function TestimonialSection() {
                 </div>
 
                 {/* 3. RIGHT COLUMN (Tall Review Card) */}
-                <div className="w-[300px] md:w-[380px] bg-[#1B3A2D] p-10 h-[550px] md:h-[600px] flex flex-col justify-start rounded-sm border border-[#B8975A]/10 flex-shrink-0">
+                <div className="w-75 md:w-95 bg-[#1B3A2D] p-10 h-138 md:h-150 flex flex-col justify-start rounded-sm border border-[#B8975A]/10 shrink-0">
                    <span className="text-[#B8975A] text-4xl font-serif mb-6 opacity-40">"</span>
                    <p className="text-[#B8975A] text-sm mb-2">★★★★★</p>
                    <p className="text-[#F0E0B0] text-xl leading-relaxed font-light">
