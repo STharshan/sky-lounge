@@ -8,64 +8,63 @@ const ContactSection = () => {
         {/* Left Column: Contact Info */}
         <div className="space-y-10">
           <div>
-            <h2 className="text-4xl md:text-8xl text-[#B8975A] mb-7">
+            {/* Heading: Cormorant Garamond Bold 700 - 82pt scale */}
+            <h2 className="font-serif font-bold text-4xl md:text-7xl text-[#B8975A] mb-7 leading-[1.1]">
               Sky Lounge Leicester
             </h2>
             <div className="space-y-2">
-              <a href="https://maps.app.goo.gl/eqpu4roRZYGDCD3KA" target='_blank' className="text-4xl transition-colors duration-300 hover:text-[#B8975A]">
+              {/* Address: Lato Regular 400 - 1.7 line-height rule */}
+              <a href="https://maps.app.goo.gl/eqpu4roRZYGDCD3KA" target='_blank' className="font-sans font-normal text-3xl md:text-4xl transition-colors duration-300 hover:text-[#B8975A] leading-[1.7]">
                 63 Bedford St S, Leicester LE1 3JR, United Kingdom
               </a>
-              <p className="text-[#F0E0B0]/70 mt-3 text-xl">
+              {/* Subtext: Lato Light 300 */}
+              <p className="font-sans font-light text-[#F0E0B0]/70 mt-3 text-xl leading-[1.7]">
                 Located in the heart of Leicester, near the city centre
               </p>
             </div>
           </div>
 
-          {/* Operating Hours */}
+          {/* Operating Hours: Labels in Cinzel (Serif 500) / Times in Lato */}
           <div className="space-y-4 max-w-md text-2xl">
             <div className="flex justify-between pb-2">
-              <span className="font-semibold text-[#B8975A]">Monday – Thursday</span>
-              <span>4:00 PM – 1:00 AM</span>
+              <span className="font-serif font-medium uppercase tracking-[0.14em] text-[18px] text-[#B8975A]">Monday – Thursday</span>
+              <span className="font-sans font-light">4:00 PM – 1:00 AM</span>
             </div>
             <div className="flex justify-between pb-2">
-              <span className="font-semibold text-[#B8975A]">Friday</span>
-              <span>4:00 PM – 2:00 AM</span>
+              <span className="font-serif font-medium uppercase tracking-[0.14em] text-[18px] text-[#B8975A]">Friday</span>
+              <span className="font-sans font-light">4:00 PM – 2:00 AM</span>
             </div>
             <div className="flex justify-between pb-2">
-              <span className="font-semibold text-[#B8975A]">Saturday</span>
-              <span>2:00 PM – 2:00 AM</span>
+              <span className="font-serif font-medium uppercase tracking-[0.14em] text-[18px] text-[#B8975A]">Saturday</span>
+              <span className="font-sans font-light">2:00 PM – 2:00 AM</span>
             </div>
             <div className="flex justify-between pb-2">
-              <span className="font-semibold text-[#B8975A]">Sunday</span>
-              <span>2:00 PM – 1:00 AM</span>
+              <span className="font-serif font-medium uppercase tracking-[0.14em] text-[18px] text-[#B8975A]">Sunday</span>
+              <span className="font-sans font-light">2:00 PM – 1:00 AM</span>
             </div>
           </div>
 
-          {/* Interactive Buttons with Fixed Hover Animation */}
+          {/* Interactive Buttons: Cinzel Style tracking */}
           <div className="flex flex-col sm:flex-row gap-8 pt-4">
-            {/* Email Link */}
             <a
               href="mailto:info@skyloungeleicester.co.uk"
-              className="group relative inline-block text-lg transition-colors duration-300 hover:text-[#B8975A]"
+              className="group relative inline-block font-serif font-medium uppercase tracking-[0.18em] text-[10px] transition-colors duration-300 hover:text-[#B8975A]"
             >
               <span>info@skyloungeleicester.co.uk</span>
-              {/* Animated underline */}
               <span className="absolute -bottom-1 left-0 w-full h-px bg-[#B8975A] origin-left scale-x-100 transition-transform duration-300 group-hover:scale-x-50"></span>
             </a>
 
-            {/* Phone Link */}
             <a
               href="tel:+441163328639"
-              className="group relative inline-block text-lg transition-colors duration-300 hover:text-[#B8975A]"
+              className="group relative font-sans inline-block font-medium uppercase tracking-[0.18em] text-[14px] transition-colors duration-300 hover:text-[#B8975A]"
             >
               <span>Phone: +44 116 332 8639</span>
-              {/* Animated underline */}
               <span className="absolute -bottom-1 left-0 w-full h-px bg-[#B8975A] origin-left scale-x-100 transition-transform duration-300 group-hover:scale-x-50"></span>
             </a>
           </div>
         </div>
 
-        {/* Right Column: Embedded Map */}
+        {/* Right Column: Embedded Map - Layout Fixed */}
         <div className="w-full h-103 md:h-183 rounded-lg overflow-hidden border border-[#B8975A]/20 shadow-2xl">
           <iframe
             title="Sky Lounge Leicester"

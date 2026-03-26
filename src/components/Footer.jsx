@@ -17,13 +17,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0A1F12] text-[#F0E0B0] pt-16 md:pt-20 pb-10 px-6">
+    <footer className="bg-[#0A1F12] text-[#F0E0B0] pt-16 md:pt-20 pb-10 px-6 font-['Lato']">
       <div className="max-w-7xl mx-auto">
 
         {/* TOP SECTION: Responsive Grid */}
         <div className="flex flex-col md:grid md:grid-cols-3 gap-12 md:gap-0 border-b border-[#B8975A]/20 pb-12 md:pb-0">
 
           {/* 1. IDENTITY / CONTACT (Middle on Desktop) */}
+          {/* Using Lato 11pt Regular for address/meta per guide */}
           <div className="order-first md:order-2 flex flex-col items-center justify-center text-center px-4 md:px-10 md:border-x pb-15 border-[#B8975A]/20">
             <div className="mb-6 md:mb-8 hover:opacity-80 transition-opacity">
               <img
@@ -33,7 +34,7 @@ export default function Footer() {
               />
             </div>
 
-            <div className="space-y-2 text-sm font-light leading-relaxed">
+            <div className="space-y-2 text-[11px] font-normal leading-relaxed uppercase tracking-widest">
               <p className="max-w-63 mx-auto">63 Bedford St S, Leicester LE1 3JR, United Kingdom</p>
               <a href="tel:+441163328639" className="block hover:text-[#B8975A] transition-colors">
                 +44 116 332 8639
@@ -47,10 +48,12 @@ export default function Footer() {
           {/* 2. NAVIGATION LINKS (Left on Desktop) */}
           <div className="order-2 md:order-1 flex flex-row justify-between md:justify-start md:gap-20 md:pr-10">
             <div>
-              <h4 className="text-[#B8975A] mb-6 uppercase text-[11px] tracking-[0.25em] font-bold">
+              {/* Titles: Cinzel 14pt (Footer column titles) */}
+              <h4 className="font-['Cinzel'] text-[#B8975A] mb-6 uppercase text-[14px] tracking-[0.18em] font-semibold">
                 Utility
               </h4>
-              <ul className="space-y-3 text-sm font-light">
+              {/* Links: Cinzel 13pt Regular */}
+              <ul className="space-y-3 font-['Cinzel'] text-[13px] tracking-[0.14em] uppercase">
                 {utilityLinks.map((link, i) => (
                   <li key={i}>
                     <Link to={link.href} className="hover:text-[#B8975A] transition-colors duration-300">
@@ -62,10 +65,10 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-[#B8975A] mb-6 uppercase text-[11px] tracking-[0.25em] font-bold">
+              <h4 className="font-['Cinzel'] text-[#B8975A] mb-6 uppercase text-[14px] tracking-[0.18em] font-semibold">
                 Pages
               </h4>
-              <ul className="space-y-3 text-sm font-light">
+              <ul className="space-y-3 font-['Cinzel'] text-[13px] tracking-[0.14em] uppercase">
                 {pageLinks.map((link, i) => (
                   <li key={i}>
                     <HashLink to={link.href} className="hover:text-[#B8975A] transition-colors duration-300">
@@ -79,10 +82,11 @@ export default function Footer() {
 
           {/* 3. ABOUT & SOCIALS (Right on Desktop) */}
           <div className="order-3 md:order-3 flex flex-col items-center md:items-start text-center md:text-left md:pl-22">
-            <h4 className="text-[#B8975A] mb-6 uppercase text-[11px] tracking-[0.25em] font-bold">
+            <h4 className="font-['Cinzel'] text-[#B8975A] mb-6 uppercase text-[14px] tracking-[0.18em] font-semibold">
               About Our Lounge
             </h4>
-            <p className="text-sm font-light leading-relaxed max-w-xs mb-8">
+            {/* Body: Lato 16pt Regular, Line-height 1.6-1.7 */}
+            <p className="text-[16px] font-normal leading-[1.7] max-w-xs mb-8 text-[#F0E0B0]">
               Established in the heart of Leicester, Sky Lounge is where premium shisha culture meets a warm, welcoming atmosphere.
             </p>
 
@@ -105,22 +109,19 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* BOTTOM SECTION: Copyright Left, Powered By Center */}
-        <div className="pt-8 grid grid-cols-1 md:grid-cols-3 items-center text-[10px] uppercase tracking-[0.2em] text-[#F0E0B0]/40 text-center md:text-left gap-4">
-
-          {/* Left Column (Desktop) */}
+        {/* BOTTOM SECTION: Footer/Meta */}
+        {/* Style: Lato 11pt, Sage Green #3D7A5E */}
+        <div className="pt-8 grid grid-cols-1 md:grid-cols-3 items-center text-[11px] uppercase tracking-[0.2em] text-[#3D7A5E] text-center md:text-left gap-4">
           <div className="md:col-span-1">
             <p>© {new Date().getFullYear()} Sky Lounge. All rights reserved.</p>
           </div>
 
-          {/* Center Column (Desktop) */}
           <div className="md:col-span-1 text-center">
             <p>
               Powered by <a href="https://www.ansely.co.uk/" target="_blank" className="text-[#B8975A] hover:underline font-bold">Ansely</a>
             </p>
           </div>
 
-          {/* Empty Right Column to maintain grid balance */}
           <div className="hidden md:block"></div>
         </div>
       </div>
