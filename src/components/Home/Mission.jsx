@@ -26,36 +26,35 @@ const MissionSection = () => {
           {/* Right Side: Content */}
           <div className="w-full lg:w-7/12 space-y-8">
             <div className="space-y-4">
-              <h3 className="text-[#B8975A] text-4xl md:text-5xl tracking-tight font-serif">
+              <h3 className="text-[#B8975A] text-4xl md:text-5xl tracking-tight">
                 Our Mission
               </h3>
-              <div className="h-px w-20 bg-linear-to-r from-[#B8975A] via-[#F0E0B0] to-[#B8975A]"></div>
             </div>
 
             <div className="space-y-6">
-              <p className="text-[#F0E0B0] text-lg md:text-xl leading-relaxed font-light italic opacity-90">
+              <p className="text-[#F0E0B0] text-lg md:text-xl leading-relaxed font-light opacity-90">
                 Our mission is simple: to give every guest an experience that goes beyond the ordinary. Whether you're unwinding after a long week or celebrating a special occasion, we make sure every visit feels personal, relaxed, and memorable.
               </p>
             </div>
 
             {/* Stats Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 pt-6">
-              <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-white flex items-center gap-1">
+              <div className="space-y-5">
+                <div className="text-4xl md:text-5xl  text-white flex items-center gap-1">
                   300
-                  <span className="text-[#B8975A]">+</span>
+                  <span className="text-white">+</span>
                 </div>
-                <div className="text-[#B8975A] text-[10px] uppercase tracking-[0.3em] font-semibold">
+                <div className="text-[#B8975A] text-sm uppercase font-semibold">
                   Guests welcomed every week
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-white flex items-center gap-1">
+              <div className="space-y-5">
+                <div className="text-4xl md:text-5xl  text-white flex items-center gap-1">
                   250
-                  <span className="text-[#B8975A]">+</span>
+                  <span className="text-white">+</span>
                 </div>
-                <div className="text-[#B8975A] text-[10px] uppercase tracking-[0.3em] font-semibold">
+                <div className="text-[#B8975A] text-sm uppercase font-semibold">
                   Unforgettable evenings
                 </div>
               </div>

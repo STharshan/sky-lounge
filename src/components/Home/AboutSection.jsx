@@ -3,7 +3,7 @@ import React from 'react';
 const AboutSection = () => {
   return (
     <section id='about' className="bg-[#1B3A2D] py-16 px-6 md:py-24">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
         <h2 className="text-[#B8975A] text-4xl md:text-5xl mb-12 font-serif">
           About us

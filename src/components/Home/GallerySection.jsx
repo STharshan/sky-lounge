@@ -32,14 +32,14 @@ const SplitScrollingHero = () => {
           <p className="text-[#F0E0B0] text-lg md:text-xl font-light mb-10 opacity-80 leading-relaxed max-w-lg">
             Discover a space where premium shisha meets exceptional food and drink. From curated flavours to signature mocktails, every detail is crafted for the experience.
           </p>
-          <a href='/#menu' className="px-10 rounded-full py-4 bg-[#1B3A2D] text-[#B8975A] border border-[#B8975A]/30 hover:bg-[#B8975A] hover:text-[#0A1F12] transition-all duration-500 font-bold uppercase tracking-widest text-sm shadow-2xl">
+          <a href='/#menu' className="px-10 py-4 bg-[#1B3A2D] text-[#B8975A] border border-[#B8975A]/30 hover:bg-[#B8975A] hover:text-[#0A1F12] transition-all duration-500 font-bold uppercase tracking-widest text-sm shadow-2xl">
             Explore the Menu
           </a>
         </div>
       </div>
 
       {/* RIGHT SIDE: Exactly 50% width, Infinite Scroll Container */}
-      <div className="w-full lg:w-1/2 relative flex flex-col justify-center gap-4 py-12 lg:py-0 overflow-hidden border-l border-[#B8975A]/10">
+      <div className="w-full lg:w-1/2 relative flex flex-col justify-center gap-4 py-12 lg:py-0 overflow-hidden ">
 
         {/* Row 1: Right to Left */}
         <div className="flex gap-4 animate-infinite-scroll">
@@ -67,9 +67,6 @@ const SplitScrollingHero = () => {
             </div>
           ))}
         </div>
-
-        {/* Luxury Vignette/Shadow overlay to blend images into the left panel */}
-        <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#0A1F12] to-transparent pointer-events-none z-10 hidden lg:block"></div>
       </div>
 
       <style jsx>{`

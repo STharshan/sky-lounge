@@ -43,7 +43,7 @@ export default function Hero() {
 
         {/* CTA Button */}
         <Link to="/booking-page" className="mt-8 px-8 py-3 border border-[#B8975A] text-[#F0E0B0] 
-          hover:bg-[#B8975A] hover:text-black rounded-full transition duration-300 tracking-widest uppercase text-sm">
+          hover:bg-[#B8975A] hover:text-black transition duration-300 tracking-widest uppercase text-sm">
           Book a Table
         </Link>
       </div>
