@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const ReservationHero = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
-      <section className="bg-[#0A1F12] pt-20 pb-12 px-6">
+      <section className="bg-[#0A1F12] pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Main Title with specified Color Gradient */}
-          <h1 className="text-5xl md:text-7xl  font-bold mb-6 leading-tight bg-linear-to-r from-[#B8975A] via-[#F0E0B0] to-[#B8975A] bg-clip-text text-transparent">
+          
+          {/* Hero H1: Cormorant Garamond, 72pt, Bold 700, Gold #B8975A */}
+          <h1 className="font-['Cormorant_Garamond'] text-[56px] md:text-[72px] font-bold mb-6 leading-[1.1] text-[#B8975A]">
             Restaurant Reservation
           </h1>
           
-          {/* Divider */}
-          <div className="w-24 h-px bg-[#B8975A] mx-auto mb-8"></div>
-          
-          <p className="text-lg md:text-xl text-[#F0E0B0] max-w-2xl mx-auto leading-relaxed">
+          {/* Divider: Gold #B8975A at 20% opacity as per common brand borders */}
+          <div className="w-24 h-px bg-[#B8975A]/40 mx-auto mb-10"></div>
+
+          <p className="font-['Lato'] text-[16px] md:text-[18px] text-[#F0E0B0] max-w-2xl mx-auto leading-[1.7] font-normal">
             Select your table and reserve a memorable dining experience
           </p>
         </div>

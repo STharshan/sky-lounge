@@ -18,32 +18,35 @@ export default function Hero() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* linear Overlay (luxury feel) */}
+      {/* Linear Overlay (luxury feel) */}
       <div className="absolute inset-0 bg-linear-to-b from-[#0A1F12]/80 via-transparent to-[#0A1F12]"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6">
-
-        {/* Heading */}
-        <h1 className=" font-semibold leading-tight pt-20 
-          text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl
+        
+        {/* Heading - Using Cormorant Garamond (Hero H1) */}
+        <h1 className="font-serif font-bold leading-[1.1] pt-4 
+          text-5xl md:text-7xl lg:text-8xl
           bg-linear-to-r from-[#B8975A] via-[#F0E0B0] to-[#B8975A]
-          bg-clip-text text-transparent
+          bg-clip-text text-transparent max-w-5xl
         ">
           Indulge in the Art of <br />
           Shisha & Flavour
         </h1>
 
-        {/* Description */}
-        <p className="mt-6 text-sm sm:text-base md:text-lg uppercase text-[#F0E0B0]/80 leading-relaxed">
-          Tuesday - Thursday & Monday: 4PM - 1AM<br />
-          Friday: 4PM - 2AM · Saturday: 2PM - 2AM <br />
-          Sunday: 2PM - 1AM
+        {/* Description - Using Lato (Body Style) */}
+        <p className="mt-8 font-sans font-light text-[#F0E0B0] text-sm md:text-base leading-relaxed tracking-wide">
+          Mon - Thu: 4PM - 1AM <span className="mx-2 text-[#B8975A]">·</span> Fri: 4PM - 2AM <br />
+          Sat: 2PM - 2AM <span className="mx-2 text-[#B8975A]">·</span> Sun: 2PM - 1AM
         </p>
 
-        {/* CTA Button */}
-        <Link to="/booking-page" className="mt-8 px-8 py-3 border border-[#B8975A] text-[#F0E0B0] 
-          hover:bg-[#B8975A] hover:text-black transition duration-300 tracking-widest uppercase text-sm">
+        {/* CTA Button - Using Cinzel (CTA Button Style) */}
+        <Link 
+          to="/booking-page" 
+          className="mt-10 px-10 py-4 bg-[#B8975A] text-[#0A1F12] 
+          font-serif font-medium text-[13px] tracking-[0.18em] uppercase
+          hover:bg-[#F0E0B0] transition-all duration-500 shadow-2xl"
+        >
           Book a Table
         </Link>
       </div>

@@ -6,16 +6,10 @@ export default function FullscreenNavbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -52,12 +46,12 @@ export default function FullscreenNavbar() {
           />
         </div>
 
-        {/* TOGGLE BUTTON */}
+        {/* TOGGLE BUTTON - Uses Cinzel (Structural) */}
         <button
           onClick={() => setOpen(!open)}
-          className="flex items-center gap-3 group focus:outline-none z-110"
+          className="flex items-center gap-4 group focus:outline-none z-110"
         >
-          <span className="tracking-[0.3em] text-xs font-bold text-[#B8975A]">
+          <span className="tracking-[0.18em] text-[13px] font-semibold text-[#B8975A] font-serif uppercase">
             {open ? "CLOSE" : "MENU"}
           </span>
 
@@ -83,27 +77,28 @@ export default function FullscreenNavbar() {
         }`}
       >
         <div className="flex flex-col md:flex-row h-full pt-24">
-          {/* NAVIGATION LINKS */}
-          <div className="flex-1 flex flex-col justify-center px-10 md:px-20 space-y-6">
+          
+          {/* NAVIGATION LINKS - Uses Cormorant Garamond (Display) */}
+          <div className="flex-1 flex flex-col justify-center px-10 md:px-20 space-y-4">
             {links.map((link, i) => (
               <HashLink
                 key={i}
                 to={link.href}
                 onClick={() => setOpen(false)}
                 style={{ transitionDelay: open ? `${i * 100}ms` : "0ms" }}
-                className={`text-4xl md:text-6xl font-serif tracking-tight relative group block transition-all duration-700 ${
+                className={`text-4xl md:text-6xl font-serif font-bold tracking-tight relative group block transition-all duration-700 ${
                   open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
                 <span className="inline-block group-hover:translate-x-4 text-[#B8975A] transition duration-500 group-hover:text-[#F0E0B0]">
                   {link.name}
                 </span>
-                <span className="absolute left-0 -bottom-2 w-0 h-px bg-linear-to-r from-[#B8975A] to-transparent group-hover:w-full transition-all duration-500"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-px bg-[#B8975A] group-hover:w-1/2 transition-all duration-500"></span>
               </HashLink>
             ))}
           </div>
 
-          {/* CONTACT & SOCIALS */}
+          {/* CONTACT & SOCIALS - Uses Lato (Body/Meta) */}
           <div className="flex-1 flex flex-col justify-end md:justify-center items-start md:items-end px-10 md:px-20 pb-16 md:pb-0 space-y-10">
             <div
               className={`space-y-4 pt-10 text-left md:text-right transition-all duration-700 ${
@@ -111,18 +106,18 @@ export default function FullscreenNavbar() {
               }`}
               style={{ transitionDelay: "400ms" }}
             >
-              <div className="space-y-1">
-                <a href="mailto:info@skyloungeleicester.co.uk" className="text-[#F0E0B0] hover:text-white transition block">
+              <div className="space-y-2 font-sans">
+                <p className="text-[#B8975A] text-[10px] tracking-[0.14em] font-serif uppercase mb-1">Get in Touch</p>
+                <a href="mailto:info@skyloungeleicester.co.uk" className="text-[#F0E0B0] font-light text-lg hover:text-white transition block">
                   info@skyloungeleicester.co.uk
                 </a>
-              </div>
-              <div className="space-y-1">
-                <a href="tel:+441163328639" className="text-[#F0E0B0] hover:text-white transition block">
+                <a href="tel:+441163328639" className="text-[#F0E0B0] font-light text-lg hover:text-white transition block">
                   +44 116 332 8639
                 </a>
               </div>
             </div>
 
+            {/* Socials */}
             <div
               className={`flex gap-6 transition-all duration-700 ${
                 open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -135,7 +130,7 @@ export default function FullscreenNavbar() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 border border-[#B8975A]/40 rounded-full flex items-center justify-center text-[#B8975A] hover:bg-[#B8975A] hover:text-[#0A1F12] transition-all duration-300 shadow-lg"
+                  className="w-12 h-12 border border-[#B8975A]/40 rounded-full flex items-center justify-center text-[#B8975A] hover:bg-[#B8975A] hover:text-[#0A1F12] transition-all duration-300"
                 >
                   {social.icon}
                 </a>

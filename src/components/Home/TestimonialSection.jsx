@@ -71,12 +71,10 @@ export default function TestimonialSection() {
     if (!container) return;
 
     let animationFrame;
-    const scrollSpeed = 1; // Adjust this value to change speed
+    const scrollSpeed = 1;
 
     const step = () => {
       container.scrollLeft += scrollSpeed;
-      
-      // Reset scroll for infinite effect
       if (container.scrollLeft >= container.scrollWidth / 2) {
         container.scrollLeft = 0;
       }
@@ -93,13 +91,12 @@ export default function TestimonialSection() {
         ref={scrollRef}
         className="flex gap-4 overflow-x-scroll no-scrollbar cursor-grab active:cursor-grabbing"
       >
-        {/* Loop twice for seamless transition */}
         {[...Array(2)].map((_, i) => (
           <div key={i} className="flex gap-4 shrink-0 items-start">
             {testimonialGroups.map((group, index) => (
               <div key={index} className="flex gap-4 shrink-0">
 
-                {/* 1. LARGE IMAGE */}
+                {/* 1. LARGE IMAGE - Layout Fixed */}
                 <div className="w-88 md:w-125 h-113 md:h-150 shrink-0">
                   <img
                     src={group.mainImg}
@@ -111,22 +108,26 @@ export default function TestimonialSection() {
                 {/* 2. MIDDLE COLUMN */}
                 <div className="flex flex-col gap-4 w-75 md:w-95 shrink-0">
                   <div className="bg-[#1B3A2D] p-8 h-80 flex flex-col justify-center rounded-sm border border-[#B8975A]/10">
-                    <span className="text-[#B8975A] text-2xl mb-4">"</span>
+                    <span className="text-[#B8975A] text-4xl mb-4 font-serif italic">"</span>
                     <p className="text-[#B8975A] text-sm mb-2">★★★★★</p>
-                    <p className="text-[#F0E0B0] text-lg leading-relaxed font-light">
+                    {/* Review Text: Cormorant Light Italic 22px */}
+                    <p className="text-[#F0E0B0] text-lg md:text-[22px] font-serif italic font-light leading-relaxed">
                       {group.review1.text}
                     </p>
-                    <p className="mt-6 text-xs text-[#F0E0B0]/60 uppercase tracking-widest">
+                    {/* Author: Lato Regular 400 11pt */}
+                    <p className="mt-6 text-[11px] text-[#F0E0B0]/60 font-sans uppercase tracking-[0.18em]">
                       {group.review1.author}
                     </p>
                   </div>
 
                   <div className="bg-[#B8975A] p-8 h-66 flex flex-col justify-center rounded-sm">
-                    <h2 className="text-[#0A1F12] text-7xl font-bold italic leading-none">
+                    {/* Rating: Cormorant Bold 72pt scale */}
+                    <h2 className="text-[#0A1F12] text-7xl md:text-[72pt] font-serif font-bold italic leading-none">
                       {group.rating}
                     </h2>
                     <p className="text-[#0A1F12] text-sm mt-2">★★★★★</p>
-                    <p className="text-[#0A1F12]/70 text-xs mt-1 font-bold uppercase tracking-tighter">
+                    {/* Meta: Lato Regular 400 11pt */}
+                    <p className="text-[#0A1F12]/70 text-[11px] font-sans font-normal mt-1 uppercase tracking-tight">
                       Based on 126 reviews
                     </p>
                   </div>
@@ -134,12 +135,14 @@ export default function TestimonialSection() {
 
                 {/* 3. RIGHT COLUMN */}
                 <div className="w-75 md:w-95 bg-[#1B3A2D] p-10 h-138 md:h-150 flex flex-col justify-start rounded-sm border border-[#B8975A]/10 shrink-0">
-                  <span className="text-[#B8975A] text-4xl mb-6 opacity-40">"</span>
+                  <span className="text-[#B8975A] text-6xl mb-6 opacity-40 font-serif italic">"</span>
                   <p className="text-[#B8975A] text-sm mb-2">★★★★★</p>
-                  <p className="text-[#F0E0B0] text-xl leading-relaxed font-light">
+                  {/* Review Text: Cormorant Light Italic 22px */}
+                  <p className="text-[#F0E0B0] text-xl md:text-[22px] font-serif italic font-light leading-relaxed">
                     {group.review2.text}
                   </p>
-                  <p className="mt-auto text-xs text-[#F0E0B0]/60 uppercase tracking-widest">
+                  {/* Author: Lato Regular 400 11pt */}
+                  <p className="mt-auto text-[11px] text-[#F0E0B0]/60 font-sans uppercase tracking-[0.18em]">
                     {group.review2.author}
                   </p>
                 </div>
