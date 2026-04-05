@@ -23,7 +23,6 @@ export default function Footer() {
         {/* TOP SECTION: Responsive Grid */}
         <div className="flex flex-col md:grid md:grid-cols-3 gap-12 md:gap-0 border-b border-[#B8975A]/20 pb-12 md:pb-0">
 
-          {/* 1. IDENTITY / CONTACT (Middle on Desktop) */}
           {/* Using Lato 11pt Regular for address/meta per guide */}
           <div className="order-first md:order-2 flex flex-col items-center justify-center text-center px-4 md:px-10 md:border-x pb-15 border-[#B8975A]/20">
             <div className="mb-6 md:mb-8 hover:opacity-80 transition-opacity">
@@ -109,7 +108,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* BOTTOM SECTION: Footer/Meta */}
         {/* Style: Lato 11pt, Sage Green #3D7A5E */}
         <div className="pt-8 grid grid-cols-1 md:grid-cols-3 items-center text-[11px] uppercase tracking-[0.2em] text-[#3D7A5E] text-center md:text-left gap-4">
           <div className="md:col-span-1">

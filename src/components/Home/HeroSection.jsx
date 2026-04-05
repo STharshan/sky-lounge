@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { AiOutlineGlobal } from 'react-icons/ai';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -11,7 +11,6 @@ const PortfolioHero = () => {
     offset: ["start start", "end end"]
   });
 
-  // ANIMATION SETTINGS:
   // Text/Badge flies UP (-400px) and fades to 0 as we scroll
   const contentY = useTransform(scrollYProgress, [0, 0.4], ["0px", "-300px"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
