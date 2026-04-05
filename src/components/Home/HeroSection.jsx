@@ -13,7 +13,7 @@ const PortfolioHero = () => {
 
   // ANIMATION SETTINGS:
   // Text/Badge flies UP (-400px) and fades to 0 as we scroll
-  const contentY = useTransform(scrollYProgress, [0, 0.4], ["0px", "-400px"]);
+  const contentY = useTransform(scrollYProgress, [0, 0.4], ["0px", "-300px"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   
   // Background stays still (0px movement)
