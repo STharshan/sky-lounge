@@ -49,7 +49,7 @@ const PortfolioHero = () => {
               <div className="absolute inset-0 animate-[spin_10s_linear_infinite]">
                 <svg className="w-full h-full" viewBox="0 0 100 100">
                   <path id="mobilePath" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none" />
-                  <text className="fill-[#B8975A] font-serif text-[7px] uppercase font-medium tracking-[0.25em]">
+                  <text className="fill-[#F0E0B0] font-serif text-[7px] uppercase font-medium tracking-[0.25em]">
                     <textPath href="#mobilePath">Working Worldwide • Based in Paris • Working Worldwide • Based in Paris •</textPath>
                   </text>
                 </svg>
@@ -78,7 +78,7 @@ const PortfolioHero = () => {
                 <div className="absolute inset-0 animate-[spin_10s_linear_infinite]">
                   <svg className="w-full h-full" viewBox="0 0 100 100">
                     <path id="desktopPath" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none" />
-                    <text className="fill-[#B8975A] font-serif text-[7px] uppercase font-medium tracking-[0.25em]">
+                    <text className="fill-[#F0E0B0] font-serif text-[7px] uppercase font-medium tracking-[0.25em]">
                       <textPath href="#desktopPath">Working Worldwide • Based in Paris • Working Worldwide • Based in Paris •</textPath>
                     </text>
                   </svg>
