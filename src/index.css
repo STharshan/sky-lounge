@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-css {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-css:hover {
+  animation-play-state: paused;
+}
+
+/* Custom "Pill" shapes based on your reference image */
+.pill-top {
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+}
+
+.pill-bottom {
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+}

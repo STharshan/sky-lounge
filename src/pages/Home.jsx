@@ -9,15 +9,17 @@ import MissionSection from '../components/Home/Mission'
 
 const Home = () => {
   return (
-    <div>
-        <Hero />
+    <main className="bg-black text-white">
+      <Hero />
+      <div className="relative z-10 bg-black">
         <AboutSection />
         <MissionSection />
         <MenuSection />
         <Gallery />
         <TestimonialSection />
         <ContactSection />
-    </div>
+      </div>
+    </main>
   )
 }
 
