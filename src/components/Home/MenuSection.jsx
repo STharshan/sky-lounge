@@ -14,6 +14,105 @@ const MenuSection = () => {
       { name: 'Mix Plater', price: '£52.00', description: 'Lamb Shish, Lamb Ribs (6), Chicken Shish, Chicken Wings (7)' },
       { name: 'Sky Plater', price: '£76.00', description: 'Lamb Shish, Adana, Lamb Ribs (6), Chicken Shish, Chicken Wings (7), Lamb Chops (4)' },
     ],
+    SIDES: [
+      { name: 'Chicken Salad', price: '£8.00', description: 'Lettuce, tomato, cucumber, chicken, olive oil, pomegranate sauce & vinegar' },
+      { name: 'Chips', price: '£3.00', description: '' },
+      { name: 'Chips + Cheese', price: '£4.00', description: '' },
+      { name: 'Masala Chips', price: '£5.00', description: '' },
+      { name: 'Chicken Wrap', price: '£9.00', description: '' },
+      { name: 'Loaded Fries', price: '£8.00', description: '' },
+    ],
+    COFFEE_AND_TEAS: [
+      { name: 'Latte', price: '£3.50', description: '' },
+      { name: 'Mocha', price: '£3.50', description: '' },
+      { name: 'Espresso', price: '£3.00', description: '' },
+      { name: 'Iced Latte', price: '£3.00', description: '' },
+      { name: 'Macchiato', price: '£3.00', description: '' },
+      { name: 'Flat White', price: '£3.00', description: '' },
+      { name: 'Cappuccino', price: '£3.00', description: 'Syrup +£0.50p' },
+      { name: 'English Breakfast / Hot Chocolate / Green Tea / Black Tea / Mint Tea / Karak Chai / Chai Latte', price: '£2.50', description: '' },
+    ],
+    MILKSHAKES: [
+      { name: 'Oreo / Kinder / Ferrero Rocher / Strawberry / Chocolate / Snickers / Banana / Vanilla', price: '£6.50', description: '' },
+    ],
+    DESSERTS: [
+      { name: 'Cakes', price: '£6.50', description: '' },
+      { name: 'Waffle', price: '£7.50', description: '' },
+      { name: 'Cookie Dough', price: '£7.50', description: '' },
+    ],
+    MOCKTAILS_AND_SOFT_DRINKS: [
+      { name: 'Classic Mojito', price: '£6.50', description: 'Classic, Strawberry, Cherry, Kiwi, Passionfruit, Mango & Black Currant' },
+      { name: 'Watermelon / Ginger Fizz', price: '£6.50', description: '' },
+      { name: 'Strawberry / Rhubarb Fizz', price: '£6.50', description: '' },
+      { name: 'Pomegranate & Ginger Fizz', price: '£6.50', description: '' },
+      { name: 'Mango / Coconut Fizz', price: '£6.50', description: '' },
+      { name: 'Watermelon Fizz', price: '£6.50', description: '' },
+      { name: 'Orange / Mango Refresher', price: '£6.50', description: '' },
+      { name: 'Rhubarb / Grapefruit Soda', price: '£6.50', description: '' },
+      { name: 'Pina Colada', price: '£6.50', description: '' },
+      { name: 'Redbull', price: '£3.00', description: '' },
+      { 
+        name: 'Britvic Orange Juice / Schwp Lemonade / Schwp Ginger Ale / J20 Apple Raspberry / J20 Orange Passion / J20 Apple Mango / Coca Cola Classic / Coca Cola Diet / Fanta Orange / Rio Tropical / Redbull Sugar Free / Cranberry Juice', 
+        price: '£2.50', 
+        description: '' 
+      },
+    ],
+    SHISHA: [
+    { 
+      name: 'PREMIUM', 
+      price: '£16.00', 
+      description: 'REHEAD (£12.00) - Flavours: Frozen Apple, Paan, Irn Bru, Lychee, Blue Mist, Frozen Lemon, Skittles, Frozen Blueberry, Frozen Lime, Frozen Raspberry, Citru Mist, Mango Ice, Love 66, Strawberry Mojito, Pink Lemonade, Cola, Green Gummy Bear, Cubano Mojito, Passion' 
+    },
+    { 
+      name: 'SAVACCO', 
+      price: '£20.00', 
+      description: 'REHEAD (£15.00) - Flavours: Black Mamba, Passionnova, G6, Picasso, Magna Carta' 
+    },
+    { 
+      name: 'AL FAKHER', 
+      price: '£13.00', 
+      description: 'REHEAD (£9.00) - Flavours: Apple, Grape, Mint, Kiwi, Lemon, Strawberry, Coconut, Watermelon, Pomegranate, Spearmint Gum, Vanilla, Peach, Berry, Orange' 
+    },
+  ],
+  BURGERS: [
+    { 
+      name: 'Chicken Burger', 
+      price: '£9.50', 
+      description: 'Chicken breast, lettuce, tomato, burger sauce & cheddar cheese.' 
+    },
+    { 
+      name: 'Lamb Burger', 
+      price: '£9.50', 
+      description: '5oz patty, lettuce, burger sauce, caramelised onions & cheddar cheese.' 
+    },
+    { 
+      name: 'Beef Burger', 
+      price: '£9.50', 
+      description: 'Beefy, juicy, and made to satisfy' 
+    },
+  ],
+  PIZZA: [
+    { 
+      name: 'Chicken', 
+      price: '£11.99', 
+      description: 'Tomato base, chicken pieces, ground basil, mozzarella & cheddar cheese' 
+    },
+    { 
+      name: 'Pepperoni', 
+      price: '£11.99', 
+      description: 'Tomato base, pepperoni pieces, ground basil, mozzarella & cheddar cheese' 
+    },
+    { 
+      name: 'Spicy Vegetarian', 
+      price: '£11.99', 
+      description: 'Tomato base, onions, peppers, jalapenos, red chilli, sweetcorn, mozzarella & cheddar cheese' 
+    },
+    { 
+      name: 'Margherita', 
+      price: '£11.99', 
+      description: 'Cheese, fresh basil, olive oil, tomato base, mozzarella & cheddar cheese' 
+    },
+  ],
   };
 
   return (
@@ -45,7 +144,7 @@ const MenuSection = () => {
 
           {/* Category Navigation - Cinzel Style */}
           <nav className="flex flex-row md:flex-col gap-8 md:min-w-38">
-            {['GRILL'].map((cat) => (
+            {['GRILL', 'SIDES', 'COFFEE_AND_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_AND_SOFT_DRINKS', 'SHISHA', 'BURGERS', 'PIZZA'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
