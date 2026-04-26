@@ -22,7 +22,7 @@ const MenuSection = () => {
       { name: 'Chicken Wrap', price: '£9.00', description: '' },
       { name: 'Loaded Fries', price: '£8.00', description: '' },
     ],
-    COFFEE_AND_TEAS: [
+    COFFEE_TEAS: [
       { name: 'Latte', price: '£3.50', description: '' },
       { name: 'Mocha', price: '£3.50', description: '' },
       { name: 'Espresso', price: '£3.00', description: '' },
@@ -40,7 +40,7 @@ const MenuSection = () => {
       { name: 'Waffle', price: '£7.50', description: '' },
       { name: 'Cookie Dough', price: '£7.50', description: '' },
     ],
-    MOCKTAILS_AND_SOFT_DRINKS: [
+    MOCKTAILS_SOFT_DRINKS: [
       { name: 'Classic Mojito', price: '£6.50', description: 'Classic, Strawberry, Cherry, Kiwi, Passionfruit, Mango & Black Currant' },
       { name: 'Watermelon / Ginger Fizz', price: '£6.50', description: '' },
       { name: 'Strawberry / Rhubarb Fizz', price: '£6.50', description: '' },
@@ -144,7 +144,7 @@ const MenuSection = () => {
 
           {/* Category Navigation - Cinzel Style */}
           <nav className="flex flex-row md:flex-col gap-8 md:min-w-38">
-            {['GRILL', 'SIDES', 'COFFEE_AND_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_AND_SOFT_DRINKS', 'SHISHA', 'BURGERS', 'PIZZA'].map((cat) => (
+            {['GRILL', 'SIDES', 'COFFEE_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_SOFT_DRINKS', 'SHISHA', 'BURGERS', 'PIZZA'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
