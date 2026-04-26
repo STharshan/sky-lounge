@@ -1,21 +1,19 @@
 import { useState } from 'react';
 
 const MenuSection = () => {
-  const [category, setCategory] = useState('SHISHA');
+  const [category, setCategory] = useState('GRILL');
 
   const menuData = {
-    SHISHA: [
-      { name: 'Double Apple', price: '£12.00', description: 'Classic blend, smooth & refreshing — natural coals included' },
-      { name: 'Blueberry Mint Ice', price: '£18.50', description: 'Icy blueberry with fresh mint undertones, medium strength' },
-      { name: 'Shepherd’s Pie', price: '£14.00', description: 'Savory topped with creamy mashed potatoes' },
-      { name: 'Bangers & Mash', price: '£13.00', description: 'Grilled sausages served with mashed potatoes' },
+   GRILL: [
+      { name: 'Lamb Shish', price: '£19.00', description: 'Tender cubes of marinated lamb, grilled to perfection over charcoal.' },
+      { name: 'Chicken Shish', price: '£15.50', description: 'Juicy chunks of chicken breast, seasoned and flame-grilled for a smoky finish.' },
+      { name: 'Chicken Wings (7)', price: '£15.50', description: 'Seven succulent wings marinated in our house blend, grilled for a crispy, charred edge.' },
+      { name: 'Lamb Ribs (6)', price: '£17.00', description: 'Six slow-cooked lamb ribs, chargrilled and glazed in our signature spices.' },
+      { name: 'Adana Kofte', price: '£18.00', description: 'Spiced minced lamb skewer, grilled to perfection.' },
+      { name: 'Lamb Chops (4)', price: '£20.00', description: 'Juicy flame-grilled lamb chops bursting with flavour.' },
+      { name: 'Mix Plater', price: '£52.00', description: 'Lamb Shish, Lamb Ribs (6), Chicken Shish, Chicken Wings (7)' },
+      { name: 'Sky Plater', price: '£76.00', description: 'Lamb Shish, Adana, Lamb Ribs (6), Chicken Shish, Chicken Wings (7), Lamb Chops (4)' },
     ],
-    DRINKS: [
-      { name: 'Pimm’s Cup', price: '£10.00', description: 'Refreshing gin cocktail with fruit' },
-      { name: 'English Ale', price: '£7.00', description: 'Traditional crisp and malty beer' },
-      { name: 'Earl Grey Tea', price: '£5.00', description: 'Classic black tea with bergamot' },
-      { name: 'Gin & Tonic', price: '£12.00', description: 'Premium gin mixed with tonic and lime' },
-    ]
   };
 
   return (
@@ -47,7 +45,7 @@ const MenuSection = () => {
 
           {/* Category Navigation - Cinzel Style */}
           <nav className="flex flex-row md:flex-col gap-8 md:min-w-38">
-            {['SHISHA', 'DRINKS'].map((cat) => (
+            {['GRILL'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
@@ -64,7 +62,7 @@ const MenuSection = () => {
 
           {/* Dynamic Menu List */}
           <div className="grow space-y-12">
-            {menuData[category].map((item, index) => (
+            {(menuData[category] || []).map((item, index) => (
               <div key={index} className="group animate-fadeIn">
                 
                 {/* Item Name Container */}
