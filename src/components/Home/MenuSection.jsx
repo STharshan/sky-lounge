@@ -102,69 +102,69 @@ const MenuSection = () => {
     <section id='menu' className="bg-[#0A1F12] flex flex-col lg:flex-row min-h-screen">
 
       {/* LEFT SIDE: Fixed Image Column (Layout Kept Exactly Same) */}
-      <div className="w-full lg:w-1/3 lg:h-screen lg:sticky lg:top-0 flex flex-col border-r border-[#B8975A]/20">
-        <div className="h-1/3 w-full">
+      <div className="w-full lg:w-1/3 h-[18rem] sm:h-[24rem] lg:h-screen lg:sticky lg:top-0 flex flex-col border-b lg:border-b-0 lg:border-r border-[#B8975A]/20">
+        <div className="h-1/3 w-full min-h-0">
           <img src="/t11.webp" alt="Menu 1" className="w-full h-full object-cover" />
         </div>
-        <div className="h-1/3 w-full border-y border-[#B8975A]/20">
+        <div className="h-1/3 w-full min-h-0 border-y border-[#B8975A]/20">
           <img src="/t12.webp" alt="Menu 2" className="w-full h-full object-cover" />
         </div>
-        <div className="h-1/3 w-full">
+        <div className="h-1/3 w-full min-h-0">
           <img src="/t7.webp" alt="Menu 3" className="w-full h-full object-cover" />
         </div>
       </div>
 
       {/* RIGHT SIDE: Scrollable Menu Content */}
-      <div className="w-full lg:w-2/3 p-8 md:p-16 lg:p-24 bg-[#0A1F12]">
+      <div className="w-full lg:w-2/3 px-4 py-8 sm:px-6 md:p-16 lg:p-24 bg-[#0A1F12] overflow-hidden">
 
-        <header className="mb-16">
-          <h1 className="text-[#B8975A] text-7xl md:text-9xl font-serif font-bold tracking-tighter uppercase">
+        <header className="mb-10 sm:mb-12 md:mb-16">
+          <h1 className="text-[#B8975A] text-5xl sm:text-6xl md:text-9xl font-serif font-bold tracking-tight uppercase">
             Menu
           </h1>
         </header>
 
-        <div className="flex flex-col md:flex-row gap-12 lg:gap-24">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-24">
 
           {/* Category Navigation - Cinzel Style */}
-          <nav className="flex flex-row md:flex-col gap-8 md:min-w-38">
-            {['GRILL', 'SIDES', 'COFFEE_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_SOFT_DRINKS', 'BURGERS', 'PIZZA'].map((cat) => (
+          <nav className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:flex-col md:gap-8 md:overflow-visible md:px-0 md:pb-0 md:min-w-[10rem] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            {['GRILL', 'SIDES', 'COFFEE_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_SOFT_DRINKS', 'SHISHA', 'BURGERS', 'PIZZA'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
-                className={`font-serif text-[14px] tracking-[0.18em] transition-all text-left uppercase ${
+                className={`shrink-0 whitespace-nowrap rounded-full border px-4 py-2 font-serif text-xs sm:text-[13px] tracking-[0.18em] transition-all text-left uppercase md:w-full md:rounded-none md:border-0 md:px-0 md:py-0 ${
                   category === cat
-                  ? 'text-[#B8975A] border-b-2 w-17 border-[#B8975A]'
-                  : 'text-[#F0E0B0]/40 hover:text-[#F0E0B0]'
+                  ? 'text-[#B8975A] border-[#B8975A] bg-[#B8975A]/10 md:border-b-2 md:w-fit'
+                  : 'text-[#F0E0B0]/60 border-[#B8975A]/20 hover:text-[#F0E0B0] hover:border-[#B8975A]/50'
                 }`}
               >
-                {cat}
+                {cat.replaceAll('_', ' ')}
               </button>
             ))}
           </nav>
 
           {/* Dynamic Menu List */}
-          <div className="grow space-y-12">
+          <div className="grow space-y-8 sm:space-y-10 md:space-y-12 min-w-0">
             {(menuData[category] || []).map((item, index) => (
               <div key={index} className="group animate-fadeIn">
                 
                 {/* Item Name Container */}
                 <div className="pb-2">
-                  <div className="text-right">
-                    <h3 className="text-[#F0E0B0] text-xl md:text-[14pt] font-sans font-bold uppercase tracking-wide">
+                  <div className="text-left sm:text-right">
+                    <h3 className="text-[#F0E0B0] text-lg sm:text-xl md:text-[14pt] font-sans font-bold uppercase tracking-wide break-words">
                       {item.name}
                     </h3>
                   </div>
                 </div>
 
                 {/* Price and Description Row */}
-                <div className='flex justify-between items-baseline'>
+                <div className='flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between'>
                   {/* PRICE - Cormorant Italic Signature */}
-                  <span className="text-[#B8975A] text-2xl md:text-[22pt] font-serif italic">
+                  <span className="shrink-0 text-[#B8975A] text-xl sm:text-2xl md:text-[22pt] font-serif italic">
                     {item.price}
                   </span>
                   
                   {/* Description - Lato Light Sage */}
-                  <p className="text-[#6EA880] font-sans font-light text-sm md:text-[13pt] mt-3 text-right pb-5 leading-relaxed max-w-63 md:max-w-xs">
+                  <p className="text-[#6EA880] font-sans font-light text-sm md:text-[13pt] text-left sm:text-right pb-5 leading-relaxed w-full sm:max-w-xs md:max-w-sm break-words">
                     {item.description}
                   </p>
                 </div>
