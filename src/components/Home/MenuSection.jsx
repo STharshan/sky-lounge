@@ -102,7 +102,7 @@ const MenuSection = () => {
     <section id='menu' className="bg-[#0A1F12] flex flex-col lg:flex-row min-h-screen">
 
       {/* LEFT SIDE: Fixed Image Column (Layout Kept Exactly Same) */}
-      <div className="w-full lg:w-1/3 h-[18rem] sm:h-[24rem] lg:h-screen lg:sticky lg:top-0 flex flex-col border-b lg:border-b-0 lg:border-r border-[#B8975A]/20">
+      <div className="w-full lg:w-1/3 h-72 sm:h-96 lg:h-screen lg:sticky lg:top-0 flex flex-col border-b lg:border-b-0 lg:border-r border-[#B8975A]/20">
         <div className="h-1/3 w-full min-h-0">
           <img src="/t11.webp" alt="Menu 1" className="w-full h-full object-cover" />
         </div>
@@ -126,8 +126,8 @@ const MenuSection = () => {
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-24">
 
           {/* Category Navigation - Cinzel Style */}
-          <nav className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:flex-col md:gap-8 md:overflow-visible md:px-0 md:pb-0 md:min-w-[10rem] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-            {['GRILL', 'SIDES', 'COFFEE_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_SOFT_DRINKS', 'SHISHA', 'BURGERS', 'PIZZA'].map((cat) => (
+          <nav className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:flex-col md:gap-8 md:overflow-visible md:px-0 md:pb-0 md:min-w-40 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            {['GRILL', 'SIDES', 'COFFEE_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_SOFT_DRINKS', 'BURGERS', 'PIZZA'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
@@ -150,7 +150,7 @@ const MenuSection = () => {
                 {/* Item Name Container */}
                 <div className="pb-2">
                   <div className="text-left sm:text-right">
-                    <h3 className="text-[#F0E0B0] text-lg sm:text-xl md:text-[14pt] font-sans font-bold uppercase tracking-wide break-words">
+                    <h3 className="text-[#F0E0B0] text-lg sm:text-xl md:text-[14pt] font-sans font-bold uppercase tracking-wide wrap-break-word">
                       {item.name}
                     </h3>
                   </div>
@@ -164,7 +164,7 @@ const MenuSection = () => {
                   </span>
                   
                   {/* Description - Lato Light Sage */}
-                  <p className="text-[#6EA880] font-sans font-light text-sm md:text-[13pt] text-left sm:text-right pb-5 leading-relaxed w-full sm:max-w-xs md:max-w-sm break-words">
+                  <p className="text-[#6EA880] font-sans font-light text-sm md:text-[13pt] text-left sm:text-right pb-5 leading-relaxed w-full sm:max-w-xs md:max-w-sm wrap-break-word">
                     {item.description}
                   </p>
                 </div>
