@@ -57,23 +57,6 @@ const MenuSection = () => {
         description: '' 
       },
     ],
-    SHISHA: [
-    { 
-      name: 'PREMIUM', 
-      price: '£16.00', 
-      description: 'REHEAD (£12.00) - Flavours: Frozen Apple, Paan, Irn Bru, Lychee, Blue Mist, Frozen Lemon, Skittles, Frozen Blueberry, Frozen Lime, Frozen Raspberry, Citru Mist, Mango Ice, Love 66, Strawberry Mojito, Pink Lemonade, Cola, Green Gummy Bear, Cubano Mojito, Passion' 
-    },
-    { 
-      name: 'SAVACCO', 
-      price: '£20.00', 
-      description: 'REHEAD (£15.00) - Flavours: Black Mamba, Passionnova, G6, Picasso, Magna Carta' 
-    },
-    { 
-      name: 'AL FAKHER', 
-      price: '£13.00', 
-      description: 'REHEAD (£9.00) - Flavours: Apple, Grape, Mint, Kiwi, Lemon, Strawberry, Coconut, Watermelon, Pomegranate, Spearmint Gum, Vanilla, Peach, Berry, Orange' 
-    },
-  ],
   BURGERS: [
     { 
       name: 'Chicken Burger', 
@@ -144,7 +127,7 @@ const MenuSection = () => {
 
           {/* Category Navigation - Cinzel Style */}
           <nav className="flex flex-row md:flex-col gap-8 md:min-w-38">
-            {['GRILL', 'SIDES', 'COFFEE_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_SOFT_DRINKS', 'SHISHA', 'BURGERS', 'PIZZA'].map((cat) => (
+            {['GRILL', 'SIDES', 'COFFEE_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_SOFT_DRINKS', 'BURGERS', 'PIZZA'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}

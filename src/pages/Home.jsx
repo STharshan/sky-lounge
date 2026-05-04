@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Home/HeroSection'
 import AboutSection from '../components/Home/AboutSection'
 import MenuSection from '../components/Home/MenuSection'
+import ShishaMenu from '../components/Home/ShishaMenu'
 import Gallery from '../components/Home/GallerySection'
 import TestimonialSection from '../components/Home/TestimonialSection'
 import ContactSection from '../components/Home/ContactSection'
@@ -15,6 +16,7 @@ const Home = () => {
         <AboutSection />
         <MissionSection />
         <MenuSection />
+        <ShishaMenu />
         <Gallery />
         <TestimonialSection />
         <ContactSection />
