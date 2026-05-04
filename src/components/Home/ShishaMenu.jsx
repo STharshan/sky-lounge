@@ -56,7 +56,7 @@ function ItemCell({ item }) {
         px-6 py-8 text-center
         bg-white text-[#2A2117]
         transition-all duration-500
-        hover:bg-[#D8A24A] hover:text-[#22160B]
+        hover:bg-[#D8A24A] hover:text-[#22160B] active:bg-[#D8A24A] active:text-[#22160B]
       "
     >
       {/* Title */}
