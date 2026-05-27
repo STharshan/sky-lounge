@@ -1,69 +1,81 @@
-import React from "react";
+import React from 'react';
 
 const MissionSection = () => {
   return (
-    <section className="bg-[#0A1F12] py-20 px-6 sm:px-10 md:px-20 overflow-hidden border-t border-[#B8975A]/10">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+    <section className="overflow-hidden border-t border-[#B8975A]/10 bg-[#0A1F12] px-6 py-16 md:py-24">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="space-y-6">
+            <div className="space-y-5">
+            <h2 className="max-w-xl font-serif text-4xl font-semibold uppercase leading-[0.88] tracking-[0.03em] text-[#F0E0B0] md:text-[42pt]">
+              Our Mission
+            </h2>
 
-          {/* Left Side: Image Container */}
-          <div className="w-full lg:w-5/12 relative group">
-            <div className="relative overflow-hidden rounded-sm aspect-video md:aspect-2/3 max-h-75 md:max-h-125 lg:w-11/12 shadow-2xl">
-              <img
-                src="/t9.webp"
-                alt="Sky Lounge Mission"
-                className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105"
-              />
-              {/* Brand Gold Border Overlay */}
-              <div className="absolute inset-0 border border-[#B8975A]/20 m-4 pointer-events-none"></div>
-            </div>
+            <p className="max-w-2xl font-sans text-base font-normal leading-[1.7] text-[#F0E0B0] md:text-[16pt]">
+              Our mission is simple: to give every guest an experience that
+              goes beyond the ordinary. Whether you&apos;re unwinding after a
+              long week or celebrating a special occasion, we make sure every
+              visit feels personal, relaxed, and memorable.
+            </p>
           </div>
 
-          {/* Right Side: Content */}
-          <div className="w-full lg:w-7/12 space-y-8">
-            <div className="space-y-2">
-              {/* Section Heading - Cormorant Garamond */}
-              <h3 className="font-serif font-semibold text-[#D4B87A] text-4xl md:text-[42pt] leading-tight">
-                Our Mission
-              </h3>
-            </div>
-
-            <div className="space-y-6">
-              {/* Body Text - Lato Regular 16pt with 1.7 line-height */}
-              <p className="font-sans text-[#F0E0B0] text-base md:text-[16pt] leading-[1.7] font-normal opacity-90">
-                Our mission is simple: to give every guest an experience that goes beyond the ordinary. 
-                Whether you're unwinding after a long week or celebrating a special occasion, 
-                we make sure every visit feels personal, relaxed, and memorable.
+          {/* <div className="grid grid-cols-2 gap-6 pt-4 sm:max-w-md">
+            <div className="space-y-2 rounded-[1.5rem] border border-[#B8975A]/20 bg-[#132A1B] px-5 py-5">
+              <p className="font-serif text-3xl text-[#F0E0B0] md:text-4xl">
+                300+
+              </p>
+              <p className="font-sans text-xs uppercase tracking-[0.18em] text-[#B8975A]">
+                Guests Weekly
               </p>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 pt-6">
-              {/* Stat 01 */}
-              <div className="space-y-3">
-                <div className="font-serif text-4xl md:text-5xl text-white flex items-center gap-1">
-                  300
-                  <span className=" not-italic">+</span>
-                </div>
-                {/* Stat Label - Cinzel Style */}
-                <div className="font-serif text-[#B8975A] text-[11px] tracking-[0.14em] uppercase">
-                  Guests welcomed every week
-                </div>
-              </div>
-
-              {/* Stat 02 */}
-              <div className="space-y-3">
-                <div className="font-serif text-4xl md:text-5xl text-white flex items-center gap-1">
-                  250
-                  <span className="not-italic">+</span>
-                </div>
-                <div className="font-serif text-[#B8975A] text-[11px] tracking-[0.14em] uppercase">
-                  Unforgettable evenings
-                </div>
-              </div>
+            <div className="space-y-2 rounded-[1.5rem] border border-[#B8975A]/20 bg-[#132A1B] px-5 py-5">
+              <p className="font-serif text-3xl text-[#F0E0B0] md:text-4xl">
+                250+
+              </p>
+              <p className="font-sans text-xs uppercase tracking-[0.18em] text-[#B8975A]">
+                Signature Nights
+              </p>
             </div>
+          </div> */}
+        </div>
+
+        <div className="relative min-h-70 sm:min-h-90 lg:min-h-125">
+          <div className="absolute right-0 top-0 h-10 w-20 text-[#B8975A] sm:h-14 sm:w-28">
+            <svg
+              viewBox="0 0 112 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-full w-full"
+            >
+              <path
+                d="M12 44C20 26 26 16 34 6"
+                stroke="currentColor"
+                strokeWidth="7"
+                strokeLinecap="round"
+              />
+              <path
+                d="M44 48C56 28 68 16 84 10"
+                stroke="currentColor"
+                strokeWidth="7"
+                strokeLinecap="round"
+              />
+              <path
+                d="M76 50C88 34 98 26 108 22"
+                stroke="currentColor"
+                strokeWidth="7"
+                strokeLinecap="round"
+              />
+            </svg>
           </div>
 
+          <div className="absolute left-2 top-6 w-[90%] rotate-[4deg] overflow-hidden rounded-[1.75rem] border-2 border-[#F0E0B0]/20 bg-[#132A1B] shadow-[0_28px_90px_rgba(0,0,0,0.35)] sm:left-6 sm:top-10 sm:w-[88%] lg:left-10 lg:w-[84%]">
+            <img
+              src="/t9.webp"
+              alt="Sky Lounge mission"
+              className="h-65 w-full object-cover sm:h-85 lg:h-108"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-[#0A1F12]/20 via-transparent to-[#F0E0B0]/10" />
+          </div>
         </div>
       </div>
     </section>
