@@ -6,7 +6,7 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* Left Column: Contact Info */}
-        <div className="space-y-10">
+        <div className="space-y-10" data-aos="fade-right" data-aos-delay="60">
           <div>
             {/* Heading: Cormorant Garamond Bold 700 - 82pt scale */}
             <h2 className="mb-7 font-serif text-4xl font-bold leading-[0.8] tracking-tighter text-[#B8975A] md:text-7xl">
@@ -65,7 +65,11 @@ const ContactSection = () => {
         </div>
 
         {/* Right Column: Embedded Map - Layout Fixed */}
-        <div className="w-full h-103 md:h-183 rounded-lg overflow-hidden border border-[#B8975A]/20 shadow-2xl">
+        <div
+          className="w-full h-103 md:h-183 rounded-lg overflow-hidden border border-[#B8975A]/20 shadow-2xl"
+          data-aos="zoom-in-left"
+          data-aos-delay="140"
+        >
           <iframe
             title="Sky Lounge Leicester"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.1074679731473!2d-1.1290314!3d52.63997139999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487761fbe26c59b9%3A0x549416e0b789a231!2sSky%20Lounge%20Leicester!5e0!3m2!1sen!2slk!4v1774460087993!5m2!1sen!2slk"

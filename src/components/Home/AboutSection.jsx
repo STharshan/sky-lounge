@@ -7,7 +7,7 @@ const AboutSection = () => {
       className="border-t border-[#B8975A]/10 bg-[#0A1F12] px-6 py-16 md:py-24"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
-        <div className="space-y-8">
+        <div className="space-y-8" data-aos="fade-bottom" data-aos-delay="60">
           <p className="font-serif text-4xl font-bold leading-[0.8] tracking-tighter text-[#D4B87A] md:text-[42pt]">
             About Us
           </p>
@@ -32,8 +32,8 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="relative min-h-90 sm:min-h-107 lg:min-h-140">
-          <div className="absolute right-2 top-3 h-32 w-[64%] rotate-[8deg] overflow-hidden rounded-[1.35rem] border-2 border-[#F0E0B0]/25 bg-[#132A1B] shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:right-8 sm:h-44 sm:w-[52%] sm:rounded-[1.8rem] md:h-56">
+        <div className="relative min-h-90 sm:min-h-107 lg:min-h-140" data-aos="fade-top" data-aos-delay="140">
+          <div className="absolute right-2 top-3 h-32 w-[64%] rotate-[8deg] overflow-hidden rounded-[1.35rem] border-2 border-[#F0E0B0]/25 bg-[#132A1B] shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:right-8 sm:h-44 sm:w-[52%] sm:rounded-[1.8rem] md:h-56" data-aos="zoom-in-down" data-aos-delay="220">
             <img
               src="/t8.webp"
               alt="Sky Lounge shisha details"
@@ -42,7 +42,7 @@ const AboutSection = () => {
             <div className="absolute inset-0 bg-[#F0E0B0]/10" />
           </div>
 
-          <div className="absolute left-0 top-32 z-20 text-[#B8975A] sm:top-40">
+          <div className="absolute left-0 top-32 z-20 text-[#B8975A] sm:top-40" data-aos="fade-bottom" data-aos-delay="280">
             <svg
               width="54"
               height="96"
@@ -58,7 +58,7 @@ const AboutSection = () => {
             </svg>
           </div>
 
-          <div className="absolute left-8 top-27 z-10 w-[84%] -rotate-[8deg] overflow-hidden rounded-[1.6rem] border-2 border-[#F0E0B0]/25 bg-[#132A1B] shadow-[0_30px_100px_rgba(0,0,0,0.38)] sm:left-12 sm:top-48 sm:w-[82%] sm:rounded-4xl">
+          <div className="absolute left-8 top-27 z-10 w-[84%] -rotate-[8deg] overflow-hidden rounded-[1.6rem] border-2 border-[#F0E0B0]/25 bg-[#132A1B] shadow-[0_30px_100px_rgba(0,0,0,0.38)] sm:left-12 sm:top-48 sm:w-[82%] sm:rounded-4xl" data-aos="zoom-in-up" data-aos-delay="180">
             <img
               src="/t6.webp"
               alt="Sky Lounge Leicester interior"

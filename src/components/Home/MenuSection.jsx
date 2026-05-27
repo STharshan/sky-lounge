@@ -117,7 +117,7 @@ const MenuSection = () => {
       {/* RIGHT SIDE: Scrollable Menu Content */}
       <div className="w-full lg:w-2/3 px-4 py-8 sm:px-6 md:p-16 lg:p-24 bg-[#0A1F12] overflow-hidden">
 
-        <header className="mb-10 sm:mb-12 md:mb-16">
+        <header className="mb-10 sm:mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="40">
           <h1 className="font-serif text-5xl font-bold uppercase leading-[0.8] tracking-tighter text-[#B8975A] sm:text-6xl md:text-9xl">
             Menu
           </h1>
@@ -126,7 +126,7 @@ const MenuSection = () => {
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-24">
 
           {/* Category Navigation - Cinzel Style */}
-          <nav className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:flex-col md:gap-8 md:overflow-visible md:px-0 md:pb-0 md:min-w-40 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          <nav className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:min-w-40 md:flex-col md:gap-8 md:overflow-visible md:px-0 md:pb-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden" data-aos="fade-right" data-aos-delay="100">
             {['GRILL', 'SIDES', 'COFFEE_TEAS', 'MILKSHAKES', 'DESSERTS', 'MOCKTAILS_SOFT_DRINKS', 'BURGERS', 'PIZZA'].map((cat) => (
               <button
                 key={cat}
@@ -143,7 +143,7 @@ const MenuSection = () => {
           </nav>
 
           {/* Dynamic Menu List */}
-          <div className="grow space-y-8 sm:space-y-10 md:space-y-12 min-w-0">
+          <div className="grow min-w-0 space-y-8 sm:space-y-10 md:space-y-12" data-aos="fade-left" data-aos-delay="140">
             {(menuData[category] || []).map((item, index) => (
               <div key={index} className="group animate-fadeIn">
                 

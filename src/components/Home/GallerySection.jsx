@@ -41,14 +41,14 @@ export default function GothamGallerySection() {
       <div className="relative mx-auto w-full max-w-480 px-4 pb-8 pt-6 sm:px-6 sm:pb-10 sm:pt-8 lg:px-8 lg:pt-6">
 
         {/* Heading - Antique Gold (#B8975A) */}
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center" data-aos="fade-up">
           <h2 className="max-w-225 pt-10 font-serif text-center text-[28px] font-bold leading-[0.8] tracking-tighter text-[#B8975A] sm:pt-12 sm:text-[38px] lg:pt-14 lg:text-[52px]">
             Taste the Atmosphere in Every Visit
           </h2>
         </div>
 
         {/* Social Links - Champagne (#F0E0B0) */}
-        <div className="mt-5 flex justify-center sm:absolute sm:right-6 sm:top-37 sm:mt-0 lg:right-8 lg:top-35">
+        <div className="mt-5 flex justify-center sm:absolute sm:right-6 sm:top-37 sm:mt-0 lg:right-8 lg:top-35" data-aos="fade-left" data-aos-delay="120">
           <div className="flex items-center gap-4 text-[18px] text-[#F0E0B0]">
             {/* Facebook Icon */}
             <a
@@ -73,7 +73,7 @@ export default function GothamGallerySection() {
         </div>
 
         {/* Marquee */}
-        <div className="mt-8 overflow-hidden sm:mt-10 lg:mt-12">
+        <div className="mt-8 overflow-hidden sm:mt-10 lg:mt-12" data-aos="zoom-in-up" data-aos-delay="160">
           <div className="gotham-marquee gap-4 sm:gap-5 lg:gap-6">
             {pairedItems.map((pair, idx) => (
               <div

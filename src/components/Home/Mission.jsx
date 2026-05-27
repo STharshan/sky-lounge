@@ -4,7 +4,7 @@ const MissionSection = () => {
   return (
     <section className="overflow-hidden border-t border-[#B8975A]/10 bg-[#0A1F12] px-6 py-16 md:py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <div className="space-y-6">
+        <div className="space-y-6" data-aos="fade-up-right" data-aos-delay="50">
             <div className="space-y-5">
             <h2 className="max-w-xl font-serif text-4xl font-bold uppercase leading-[0.8] tracking-tighter text-[#F0E0B0] md:text-[42pt]">
               Our Mission
@@ -39,8 +39,8 @@ const MissionSection = () => {
           </div> */}
         </div>
 
-        <div className="relative min-h-70 sm:min-h-90 lg:min-h-125">
-          <div className="absolute right-0 top-0 h-10 w-20 text-[#B8975A] sm:h-14 sm:w-28">
+        <div className="relative min-h-70 sm:min-h-90 lg:min-h-125" data-aos="fade-up-left" data-aos-delay="120">
+          <div className="absolute right-0 top-0 h-10 w-20 text-[#B8975A] sm:h-14 sm:w-28" data-aos="fade-left" data-aos-delay="240">
             <svg
               viewBox="0 0 112 56"
               fill="none"
@@ -68,7 +68,7 @@ const MissionSection = () => {
             </svg>
           </div>
 
-          <div className="absolute left-2 top-6 w-[90%] rotate-[4deg] overflow-hidden rounded-[1.75rem] border-2 border-[#F0E0B0]/20 bg-[#132A1B] shadow-[0_28px_90px_rgba(0,0,0,0.35)] sm:left-6 sm:top-10 sm:w-[88%] lg:left-10 lg:w-[84%]">
+          <div className="absolute left-2 top-6 w-[90%] rotate-[4deg] overflow-hidden rounded-[1.75rem] border-2 border-[#F0E0B0]/20 bg-[#132A1B] shadow-[0_28px_90px_rgba(0,0,0,0.35)] sm:left-6 sm:top-10 sm:w-[88%] lg:left-10 lg:w-[84%]" data-aos="zoom-in" data-aos-delay="180">
             <img
               src="/t9.webp"
               alt="Sky Lounge mission"

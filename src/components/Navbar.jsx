@@ -31,6 +31,8 @@ export default function FullscreenNavbar() {
     <div>
       {/* NAVBAR */}
       <nav
+        data-aos="fade-down"
+        data-aos-duration="700"
         className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 py-5 z-100 transition-all duration-500 ${
           scrolled || open 
             ? "bg-[#0A1F12] shadow-xl py-4" 

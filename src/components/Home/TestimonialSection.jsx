@@ -86,9 +86,15 @@ export default function TestimonialSection() {
   }, []);
 
   return (
-    <section id="testimonial" className="bg-[#1B3A2D] py-20 overflow-hidden">
+    <section
+      id="testimonial"
+      data-aos="fade-up"
+      className="bg-[#1B3A2D] py-20 overflow-hidden"
+    >
       <div
         ref={scrollRef}
+        data-aos="fade-left"
+        data-aos-delay="100"
         className="flex gap-4 overflow-x-scroll no-scrollbar cursor-grab active:cursor-grabbing"
       >
         {[...Array(2)].map((_, i) => (

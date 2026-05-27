@@ -17,14 +17,18 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0A1F12] text-[#F0E0B0] pt-16 md:pt-20 pb-10 px-6 font-['Lato']">
+    <footer
+      className="bg-[#0A1F12] px-6 pb-10 pt-16 text-[#F0E0B0] font-['Lato'] md:pt-20"
+    >
       <div className="max-w-7xl mx-auto">
 
         {/* TOP SECTION: Responsive Grid */}
-        <div className="flex flex-col md:grid md:grid-cols-3 gap-12 md:gap-0 border-b border-[#B8975A]/20 pb-12 md:pb-0">
+        <div className="flex flex-col gap-12 border-b border-[#B8975A]/20 pb-12 md:grid md:grid-cols-3 md:gap-0 md:pb-0">
 
           {/* Using Lato 11pt Regular for address/meta per guide */}
-          <div className="order-first md:order-2 flex flex-col items-center justify-center text-center px-4 md:px-10 md:border-x pb-15 border-[#B8975A]/20">
+          <div
+            className="order-first flex flex-col items-center justify-center border-[#B8975A]/20 px-4 pb-15 text-center md:order-2 md:border-x md:px-10"
+          >
             <div className="mb-6 md:mb-8 hover:opacity-80 transition-opacity">
               <img
                 src="/logo.png"
@@ -45,7 +49,9 @@ export default function Footer() {
           </div>
 
           {/* 2. NAVIGATION LINKS (Left on Desktop) */}
-          <div className="order-2 md:order-1 flex flex-row justify-between md:justify-start md:gap-20 md:pr-10">
+          <div
+            className="order-2 flex flex-row justify-between md:order-1 md:justify-start md:gap-20 md:pr-10"
+          >
             <div>
               {/* Titles: Cinzel 14pt (Footer column titles) */}
               <h4 className="font-['Cinzel'] text-[#B8975A] mb-6 uppercase text-[14px] tracking-[0.18em] font-semibold">
@@ -80,7 +86,9 @@ export default function Footer() {
           </div>
 
           {/* 3. ABOUT & SOCIALS (Right on Desktop) */}
-          <div className="order-3 md:order-3 flex flex-col items-center md:items-start text-center md:text-left md:pl-22">
+          <div
+            className="order-3 flex flex-col items-center text-center md:items-start md:pl-22 md:text-left"
+          >
             <h4 className="font-['Cinzel'] text-[#B8975A] mb-6 uppercase text-[14px] tracking-[0.18em] font-semibold">
               About Our Lounge
             </h4>

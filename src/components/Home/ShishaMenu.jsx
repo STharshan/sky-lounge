@@ -83,7 +83,7 @@ const ShishaMenu = () => {
       <div className="mx-auto max-w-7xl overflow-hidden">
         
         {/* Header */}
-        <div className="border-b border-[#B8975A]/20 px-6 py-8 text-center">
+        <div className="border-b border-[#B8975A]/20 px-6 py-8 text-center" data-aos="fade-up">
           <h2 className="font-serif text-4xl font-bold uppercase leading-[0.8] tracking-tighter text-[#F0E0B0] sm:text-5xl">
             Shisha Menu
           </h2>
@@ -92,9 +92,7 @@ const ShishaMenu = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {showcaseCells.map((cell, index) => (
-            <div
-              key={index}
-            >
+            <div key={index} data-aos={cell.type === "image" ? "zoom-in" : "fade-up"} data-aos-delay={index * 70}>
               {cell.type === "image" ? (
                 <ImageCell image={cell.image} />
               ) : (
