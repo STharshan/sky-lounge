@@ -8,12 +8,12 @@ const AboutSection = () => {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
         <div className="space-y-8">
-          <p className=" text-4xl font-semibold leading-tight text-[#D4B87A] md:text-[42pt]">
+          <p className="font-serif text-4xl font-bold leading-[0.8] tracking-tighter text-[#D4B87A] md:text-[42pt]">
             About Us
           </p>
 
           <div className="space-y-6">
-            <h2 className="max-w-xl  text-4xl font-semibold uppercase leading-[0.88] tracking-[0.03em] text-[#F0E0B0] md:text-[42pt]">
+            <h2 className="max-w-xl font-serif text-4xl font-bold uppercase leading-[0.8] tracking-tighter text-[#F0E0B0] md:text-[42pt]">
               Premium Shisha
               <br />
               Lounge

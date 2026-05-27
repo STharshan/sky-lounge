@@ -84,7 +84,7 @@ const ShishaMenu = () => {
         
         {/* Header */}
         <div className="border-b border-[#B8975A]/20 px-6 py-8 text-center">
-          <h2 className="font-serif text-4xl uppercase tracking-[0.08em] text-[#F0E0B0] sm:text-5xl">
+          <h2 className="font-serif text-4xl font-bold uppercase leading-[0.8] tracking-tighter text-[#F0E0B0] sm:text-5xl">
             Shisha Menu
           </h2>
         </div>

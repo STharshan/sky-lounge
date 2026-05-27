@@ -9,7 +9,7 @@ const ContactSection = () => {
         <div className="space-y-10">
           <div>
             {/* Heading: Cormorant Garamond Bold 700 - 82pt scale */}
-            <h2 className="font-serif font-bold text-4xl md:text-7xl text-[#B8975A] mb-7 leading-[1.1]">
+            <h2 className="mb-7 font-serif text-4xl font-bold leading-[0.8] tracking-tighter text-[#B8975A] md:text-7xl">
               Sky Lounge Leicester
             </h2>
             <div className="space-y-2">

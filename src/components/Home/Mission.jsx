@@ -6,7 +6,7 @@ const MissionSection = () => {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div className="space-y-6">
             <div className="space-y-5">
-            <h2 className="max-w-xl font-serif text-4xl font-semibold uppercase leading-[0.88] tracking-[0.03em] text-[#F0E0B0] md:text-[42pt]">
+            <h2 className="max-w-xl font-serif text-4xl font-bold uppercase leading-[0.8] tracking-tighter text-[#F0E0B0] md:text-[42pt]">
               Our Mission
             </h2>
 

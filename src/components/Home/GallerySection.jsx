@@ -42,7 +42,7 @@ export default function GothamGallerySection() {
 
         {/* Heading - Antique Gold (#B8975A) */}
         <div className="flex flex-col items-center justify-center">
-          <h2 className="max-w-225 pt-10 font-serif text-center text-[28px] font-semibold leading-tight tracking-[-0.03em] text-[#B8975A] sm:pt-12 sm:text-[38px] lg:pt-14 lg:text-[52px]">
+          <h2 className="max-w-225 pt-10 font-serif text-center text-[28px] font-bold leading-[0.8] tracking-tighter text-[#B8975A] sm:pt-12 sm:text-[38px] lg:pt-14 lg:text-[52px]">
             Taste the Atmosphere in Every Visit
           </h2>
         </div>

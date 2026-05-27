@@ -118,7 +118,7 @@ const MenuSection = () => {
       <div className="w-full lg:w-2/3 px-4 py-8 sm:px-6 md:p-16 lg:p-24 bg-[#0A1F12] overflow-hidden">
 
         <header className="mb-10 sm:mb-12 md:mb-16">
-          <h1 className="text-[#B8975A] text-5xl sm:text-6xl md:text-9xl font-serif font-bold tracking-tight uppercase">
+          <h1 className="font-serif text-5xl font-bold uppercase leading-[0.8] tracking-tighter text-[#B8975A] sm:text-6xl md:text-9xl">
             Menu
           </h1>
         </header>
