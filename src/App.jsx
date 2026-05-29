@@ -35,7 +35,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <ScrollToHash />
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/booking-page" element={<BookingPage /> } />
