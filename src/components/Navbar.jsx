@@ -38,12 +38,12 @@ export default function FullscreenNavbar() {
     <div>
       {/* GLOBAL FIXED NAVBAR */}
       <nav
-        className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 sm:px-10 lg:px-20 transition-all duration-500 z-[400] ${
+        className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 sm:px-10 lg:px-20 transition-all duration-500 z-400 ${
           open 
-            ? "bg-[#0A1F12] py-6 sm:py-8" 
+            ? "bg-[#0A1F12] py-4" 
             : scrolled 
-              ? "bg-[#0A1F12] shadow-xl py-3 sm:py-4" 
-              : "bg-transparent py-4 sm:py-6"
+              ? "bg-[#0A1F12] shadow-xl py-2" 
+              : "bg-transparent py-4"
         }`}
       >
         {/* Logo */}
@@ -51,7 +51,7 @@ export default function FullscreenNavbar() {
           <img
             src="/logo.png"
             alt="Sky Lounge Logo"
-            className="h-9 sm:h-10 md:h-12 w-auto object-contain"
+            className="h-15 md:h-17 w-auto object-contain"
           />
         </div>
 
@@ -63,7 +63,7 @@ export default function FullscreenNavbar() {
           aria-expanded={open}
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         >
-          <span className={`${open ? "block" : "hidden min-[360px]:inline"} tracking-[0.18em] text-[12px] sm:text-[13px] font-semibold font-serif uppercase`}>
+          <span className={`${open ? "block" : "hidden min-[360px]:inline"} tracking-[0.18em] text-lg font-semibold font-serif uppercase`}>
             {open ? "CLOSE" : "MENU"}
           </span>
 
